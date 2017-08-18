@@ -9,4 +9,8 @@ angular.module('strawberry.main.ctrl', [])
     $rootScope.screenHeight_content = window.innerHeight-85+"px";
 
     $rootScope.screenWidth = window.innerWidth+"px";
+
+    $scope.jumpTo = function(){
+
+    }
   }]);

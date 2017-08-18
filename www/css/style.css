@@ -38,6 +38,7 @@
   width:18px;
   height:18px;
 }
+.active,
 ion-tabs.strawberry.tabs-color-active-positive .tab-item.tab-item-active,
 ion-tabs.strawberry.tabs-color-active-positive .tab-item.active,
 ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated{
@@ -91,4 +92,40 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated{
   background-size:cover;
   background-position: center;
 }
+/*广播小喇叭*/
+.broadcast{
+  width: 305px;
+  height: 22px;
+  background: #ddd;
+  border-radius: 10px;
+  margin: 7px auto 3px;
+  padding-left: 5px;
+}
+/*周推榜...四幅图*/
+.dash-row{
+  width:320px;
+  padding:0 5px;
+  padding-top:5px;
+  display: flex;
+  justify-content: center;
+}
+.dash-row div{
+  padding:0 5px;
+}
+.dash-row div img{
+  width:100%;height:60px;
+}
+.dash-two-label{
+  width:320px;
+  border:1px solid #f0f0f0;
+  border-left:none;
+  border-right:none;
+  margin-top:10px;
+  padding:0;
+}
+.dash-two-label div{
+  padding:7px;
+  text-align:center;
+}
+
 

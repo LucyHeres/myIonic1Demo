@@ -1,18 +1,51 @@
 <ion-view>
   <ion-content class="scroll-content ionic-scroll">
-    <ion-slide-box style="height:160px;">
+    <ion-refresher on-refresh="" pulling-icon="ion-android-arrow-down" pulling-text="下拉刷新">
+    </ion-refresher>
+    <ion-slide-box auto-play="true" does-continue="true" slide-interval="3000" style="height:160px;">
       <ion-slide>
-        <div class="slider-box" style="background-image:url('img/media/slider/1.png')">1111</div>
+        <div class="slider-box" style="background-image:url('img/media/slider/1.png')"></div>
       </ion-slide>
       <ion-slide>
-        <div class="slider-box">2222</div>
+        <div class="slider-box" style="background-image:url('img/media/slider/2.png')"></div>
       </ion-slide>
     </ion-slide-box>
-    <div>1</div><div>1</div><div>1</div><div>1</div><div>1</div><div>1</div>
-    <div>1</div><div>1</div><div>1</div><div>1</div><div>1</div><div>1</div>
-    <div>1</div><div>1</div><div>1</div><div>1</div><div>1</div><div>1</div>
-    <div>1</div><div>1</div><div>1</div><div>1</div><div>1</div><div>1</div>
-    <div>1</div><div>1</div><div>1</div><div>1</div><div>1</div><div>2</div>
+    <div class="broadcast">
+      <img src="img/media/icon/broadcast.png" style="width:16px;position: relative;top: -3px;"/>
+      <marquee behavior="scroll" contenteditable="true" scrollamount="4" width="270">
+      <span>11111111111</span><span>22222222222222222222222222222222222</span>
+      </marquee>
+    </div>
+    <div class="dash-row">
+      <div>
+        <img src="img/media/rank/zhou-tui-bang.png" width="100%" alt=""/>
+      </div>
+      <div>
+        <img src="img/media/rank/zuo-zhe-bang.png" width="100%" alt=""/>
+      </div>
+    </div>
+    <div class="dash-row">
+      <div>
+        <img src="img/media/rank/da-shang-bang.png" width="100%" alt=""/>
+      </div>
+      <div>
+        <img src="img/media/rank/cao-mei-bang.png" width="100%" alt=""/>
+      </div>
+    </div>
+    <div class="dash-two-label row">
+      <div class="col" ng-class="{'active':active_dashTwoLabel===0}" ng-click="clickChanged_two(0)">热门长篇</div>
+      <div class="col" ng-class="{'active':active_dashTwoLabel===1}" ng-click="clickChanged_two(1)" style="border-left:1px solid #f0f0f0;">热门短篇</div>
+    </div>
+
+    <!--热门长篇-->
+    <div class="book_inDash">
+
+    </div>
+    <!--热门短篇-->
+    <div class="story_inDash">
+
+    </div>
+
   </ion-content>
 
 </ion-view>
