@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/www/css/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/bookshelf.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/dash.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/loop.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/main.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/publish.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/user.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/directives.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/routers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/services.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/dash/recommend.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/dash/search.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/dash/sort.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/tab-bookshelf.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/tab-loop.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/tab-publish.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/tab-user.html" charset="UTF-8" />
   </component>
 </project>

@@ -3,7 +3,7 @@
  */
 angular.module('strawberry.dash.ctrl', [])
   .controller('dashCtrl',['$scope','$rootScope',function($scope,$rootScope){
-    //dash-three-box«–ªª
+    //dash-three-boxÂàáÊç¢
     $scope.active_dashThreeBox=0;
     $scope.pages=['templates/dash/recommend.html','templates/dash/sort.html','templates/dash/search.html'];
     $scope.p=$scope.pages[0];
@@ -11,10 +11,10 @@ angular.module('strawberry.dash.ctrl', [])
       $scope.active_dashThreeBox=index;
       $scope.p=$scope.pages[index];
     };
-      angular.element(document.querySelector(".dash-three-box")).css("height",$rootScope.screenHeight_content);
-      //dash-two-label«–ªª
-      $scope.active_dashTwoLabel=0;
-      $scope.clickChanged_two=function(index){
-        $scope.active_dashTwoLabel=index;
-      }
+    angular.element(document.querySelector(".dash-three-box")).css("height",$rootScope.screenHeight_content);
+    //dash-two-labelÂàáÊç¢
+    $scope.active_dashTwoLabel=0;
+    $scope.clickChanged_two=function(index){
+      $scope.active_dashTwoLabel=index;
+    }
   }]);
