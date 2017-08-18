@@ -11,7 +11,7 @@ angular.module('strawberry.dash.ctrl', [])
       $scope.active_dashThreeBox=index;
       $scope.p=$scope.pages[index];
     };
-    angular.element(document.querySelector(".dash-three-box")).css("height",$rootScope.screenHeight_content);
+    angular.element(document.querySelector(".dash-three-box")).css("min-height",$rootScope.screenHeight_content);
     //dash-two-label切换
     $scope.active_dashTwoLabel=0;
     $scope.clickChanged_two=function(index){
