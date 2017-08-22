@@ -145,26 +145,37 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
 /*热门长篇*/
 .dash-book {
   width: 320px;
-  height: 150px;
   padding: 5px;
-  overflow: hidden;
+  border-bottom: 1px solid #F0F0F0;
+  position: relative;
 }
 .dash-book .cover {
   display: inline-block;
+  position: relative;
   width: 85px;
-  height: 115px;
+  vertical-align: top;
+}
+.dash-book .cover .contract {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
 }
 .dash-book .cover .img {
   width: 75px;
   height: 105px;
   background-position: center;
   background-size: cover;
-  margin: 5px;
+  margin: 5px 0 0 5px;
 }
 .dash-book .info {
   display: inline-block;
-  width: 215px;
-  height: 115px;
+  width: 210px;
+  margin-left: 5px;
+  position: relative;
 }
 .dash-book .info .author {
   height: 18px;
@@ -189,34 +200,142 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   line-height: 14px;
 }
 .dash-book .info .category {
-  position: relative;
-  top: -3px;
+  font-size: 0;
+  height: 12px;
+  margin: 2px 0;
 }
 .dash-book .info .category div {
   display: inline-block;
   font-size: 8px;
   color: #999;
-  border: 1px solid #999;
+  border: 1px solid #bbb;
   border-radius: 3px;
-  line-height: 8px;
-  padding: 2px;
+  line-height: 11px;
+  padding: 0 2px;
+  margin-right: 3px;
 }
 .dash-book .info .desc {
   height: 32px;
+  color: #666;
   font-size: 12px;
   line-height: 16px;
   overflow: hidden;
+  margin: 5px 0;
 }
 .dash-book .info .tag {
-  max-width: 180px;
-  max-height: 37px;
-  min-height: 15px;
   overflow: hidden;
+  font-size: 0;
+  max-height: 35px;
+  height: 15px;
 }
 .dash-book .info .tag div {
   display: inline-block;
-  font-size:10px;
-  background: #ddd;
-  padding:0 2px;
-  border-radius:5px;
+  padding: 0 1px;
+  margin-right: 3px;
+  color: #999;
+  background: #f0f0f0;
+  border-radius: 2px;
+  font-size: 8px;
+  line-height: 13px;
+}
+.dash-book .info .status {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 9px;
+  line-height: 15px;
+  color: #fff;
+  background: #ffbf00;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+.dash-book .info .update_time {
+  position: absolute;
+  right: 1px;
+  bottom: -4px;
+  font-size: 8px;
+}
+/*热门短篇*/
+.dash-story {
+  width: 320px;
+  padding: 10px 0;
+  border-bottom: 1px solid #F0F0F0;
+  position: relative;
+}
+.dash-story .author {
+  padding-left: 10px;
+}
+.dash-story .author .avatar {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.dash-story .author .avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.dash-story .author .name {
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 10px;
+  line-height: 28px;
+  color: #999;
+  vertical-align: top;
+}
+.dash-story .cover {
+  width: 320px;
+  height: 110px;
+  overflow: hidden;
+}
+.dash-story .cover img {
+  width: 100%;
+}
+.dash-story .info {
+  padding: 5px 10px 0 10px;
+}
+.dash-story .info .name {
+  font-size: 15px;
+}
+.dash-story .info .category {
+  font-size: 0;
+  height: 12px;
+  margin: 2px 0;
+}
+.dash-story .info .category div {
+  display: inline-block;
+  font-size: 8px;
+  color: #999;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  line-height: 11px;
+  padding: 0 2px;
+  margin-right: 3px;
+}
+.dash-story .info .desc {
+  font-size: 12px;
+  line-height: 16px;
+  color: #999;
+  min-height: 16px;
+  max-height: 32px;
+  overflow: hidden;
+  margin: 5px 0;
+}
+.dash-story .info .tag {
+  overflow: hidden;
+  font-size: 0;
+  max-height: 35px;
+  height: 15px;
+}
+.dash-story .info .tag div {
+  display: inline-block;
+  padding: 0 1px;
+  margin-right: 3px;
+  color: #999;
+  background: #f0f0f0;
+  border-radius: 2px;
+  font-size: 8px;
+  line-height: 13px;
 }

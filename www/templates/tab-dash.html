@@ -6,13 +6,8 @@
     <div ng-class="{'active':active_dashThreeBox===2}" ng-click="clickChanged_three(2)"><span>搜索</span><b></b></div>
   </div>
   <ion-content class="has-sub-header scroll-content ionic-scroll top38">
-    <!--<ion-slide-box show-pager="false" on-slide-changed="slideChanged($index)" style="height:483px;">-->
-      <!--<ion-slide ng-repeat="p in pages">-->
-        <!--<div ng-include="p"></div>-->
-      <!--</ion-slide>-->
-    <!--</ion-slide-box>-->
     <div class="dash-three-box">
-      <div ng-include="p"></div>
+      <div ng-include="dashThreeBox_page"></div>
     </div>
   </ion-content>
 </ion-view>

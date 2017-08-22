@@ -53,6 +53,11 @@ angular.module('starter.routers', [])
             controller: 'userCtrl'
           }
         }
+      })
+      .state('top.caomei',{
+        url:'/top-caomei',
+        templateUrl:'templates/cao-mei.html',
+        controller:'dashCtrl'
       });
     $urlRouterProvider.otherwise('/tab/dash');
   });
