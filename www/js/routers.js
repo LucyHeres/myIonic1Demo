@@ -54,9 +54,14 @@ angular.module('starter.routers', [])
           }
         }
       })
-      .state('top.caomei',{
-        url:'/top-caomei',
-        templateUrl:'templates/cao-mei.html',
+      .state('top',{
+        url:'/top',
+        templateUrl:'templates/top/index.html',
+        controller:'dashCtrl'
+      })
+      .state('top.zhoutui',{
+        url:'/zhoutui',
+        templateUrl:'templates/top/zhou-tui.html',
         controller:'dashCtrl'
       });
     $urlRouterProvider.otherwise('/tab/dash');

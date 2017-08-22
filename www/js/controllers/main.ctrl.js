@@ -11,6 +11,12 @@ angular.module('strawberry.main.ctrl', [])
     $rootScope.screenWidth = window.innerWidth+"px";
 
     $scope.jumpTo = function(path,id){
-        $state.go(path);
+
+      try{
+        $state.go(path);console.log(path);
+      }catch(e){
+        console.log(e);
+      }
+
     }
   }]);
