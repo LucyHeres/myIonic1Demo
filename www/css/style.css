@@ -114,6 +114,11 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   margin: 7px auto 3px;
   padding-left: 5px;
 }
+.broadcast span {
+  color: #a2a2a2;
+  font-size: 12px;
+  margin-right: 10px;
+}
 /*周推榜...四幅图*/
 .dash-row {
   width: 320px;
@@ -199,12 +204,12 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   color: #999;
   line-height: 14px;
 }
-.dash-book .info .category {
+.dash-book .info .tag {
   font-size: 0;
   height: 12px;
   margin: 2px 0;
 }
-.dash-book .info .category div {
+.dash-book .info .tag div {
   display: inline-block;
   font-size: 8px;
   color: #999;
@@ -222,13 +227,13 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   overflow: hidden;
   margin: 5px 0;
 }
-.dash-book .info .tag {
+.dash-book .info .category {
   overflow: hidden;
   font-size: 0;
   max-height: 35px;
   height: 15px;
 }
-.dash-book .info .tag div {
+.dash-book .info .category div {
   display: inline-block;
   padding: 0 1px;
   margin-right: 3px;
@@ -299,12 +304,12 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
 .dash-story .info .name {
   font-size: 15px;
 }
-.dash-story .info .category {
+.dash-story .info .tag {
   font-size: 0;
   height: 12px;
   margin: 2px 0;
 }
-.dash-story .info .category div {
+.dash-story .info .tag div {
   display: inline-block;
   font-size: 8px;
   color: #999;
@@ -323,13 +328,13 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   overflow: hidden;
   margin: 5px 0;
 }
-.dash-story .info .tag {
+.dash-story .info .category {
   overflow: hidden;
   font-size: 0;
   max-height: 35px;
   height: 15px;
 }
-.dash-story .info .tag div {
+.dash-story .info .category div {
   display: inline-block;
   padding: 0 1px;
   margin-right: 3px;

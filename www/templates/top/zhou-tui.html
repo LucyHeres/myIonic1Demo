@@ -1,11 +1,14 @@
 <ion-view>
   <div class="sub-header">
     <div class="btns">
-      <div class="icon ion-ios-arrow-back"></div>
+      <div class="icon ion-ios-arrow-back" ng-click="back()"></div>
     </div>
     <div class="title">周推榜</div>
     <div class="btns">
       <div class="icon ion-ios-more" style="font-size:24px;"></div>
     </div>
   </div>
+
+  <div ng-include="'templates/dash/hot-book.html'"></div>
+
 </ion-view>
