@@ -57,12 +57,24 @@ angular.module('starter.routers', [])
       .state('top',{
         url:'/top',
         templateUrl:'templates/top/index.html',
-        controller:'dashCtrl'
+        abstract: true
       })
       .state('top.zhoutui',{
         url:'/zhoutui',
         templateUrl:'templates/top/zhou-tui.html',
-        controller:'dashCtrl'
-      });
+        controller:'topCtrl'
+      })
+      .state('top.zuozhe',{
+        url:'/zuozhe',
+        templateUrl:'templates/top/zuo-zhe.html',
+        controller:'topCtrl'
+      })
+
+
+
+
+
+
+
     $urlRouterProvider.otherwise('/tab/dash');
   });

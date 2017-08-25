@@ -1,9 +1,12 @@
 <ion-view>
-  <ion-content class="scroll-content ionic-scroll">
+  <!--置顶按钮-->
+    <div class="goTopButton" ng-click="goTop()" ng-if="show_goTopBtn">Top</div>
+
+  <ion-content class="scroll-content ionic-scroll" delegate-handle="mainScroll" on-swipe="fun()">
     <ion-refresher on-refresh="" pulling-icon="ion-android-arrow-down" pulling-text="下拉更新">
     </ion-refresher>
     <div style="width:100%;height:160px;overflow: hidden;background-color: #e6e6e6">
-      <ion-slide-box  auto-play="true" does-continue="true" ng-if="carousel.length>0">
+      <ion-slide-box auto-play="true" does-continue="true" ng-if="carousel.length>0">
         <ion-slide ng-repeat="item in carousel">
           <div style="background-image:url({{item.image}})" class="slider-box"></div>
         </ion-slide>
@@ -14,14 +17,14 @@
       <img src="img/media/icon/broadcast.png" style="width:16px;position: relative;top: -3px;"/>
       <marquee behavior="scroll" contenteditable="false" scrollamount="4" width="270"
                style="position: relative; top: 1px;">
-      <span ng-repeat="item in broadcast" ng-bind-html="item.message"></span>
+        <span ng-repeat="item in broadcast" ng-bind-html="item.message"></span>
       </marquee>
     </div>
     <div class="dash-row">
       <div class="zhou-tui" ng-click="jumpTo('top.zhoutui')">
         <img src="img/media/rank/zhou-tui-bang.png" width="100%" alt=""/>
       </div>
-      <div class="zuo-zhe">
+      <div class="zuo-zhe" ng-click="jumpTo('top.zuozhe')">
         <img src="img/media/rank/zuo-zhe-bang.png" width="100%" alt=""/>
       </div>
     </div>
@@ -36,7 +39,9 @@
 
     <div class="dash-two-label row">
       <div class="col" ng-class="{'active':active_dashTwoLabel===0}" ng-click="clickChanged_two(0)">热门长篇</div>
-      <div class="col" ng-class="{'active':active_dashTwoLabel===1}" ng-click="clickChanged_two(1)" style="border-left:1px solid #f0f0f0;">热门短篇</div>
+      <div class="col" ng-class="{'active':active_dashTwoLabel===1}" ng-click="clickChanged_two(1)"
+           style="border-left:1px solid #f0f0f0;">热门短篇
+      </div>
     </div>
     <div ng-show="show_hotbook">
       <!--热门长篇-->
@@ -47,12 +52,11 @@
       <div ng-include="'templates/dash/hot-story.html'"></div>
     </div>
 
+
     <ion-infinite-scroll
-      on-infinite="getMoreBook()"
+      on-infinite="getMoreData()"
       distance="1%"
-      ng-if="moreData"
-      >
-    </ion-infinite-scroll>
+      ng-if="has_more">
 
   </ion-content>
 

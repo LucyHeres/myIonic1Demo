@@ -11,6 +11,7 @@
     <file url="file://$PROJECT_DIR$/www/js/controllers/loop.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/main.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/publish.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/top.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/user.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/directives.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/routers.js" charset="UTF-8" />
@@ -22,5 +23,6 @@
     <file url="file://$PROJECT_DIR$/www/templates/tab-loop.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/tab-publish.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/tab-user.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/top/zuo-zhe.html" charset="UTF-8" />
   </component>
 </project>

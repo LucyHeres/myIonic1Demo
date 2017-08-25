@@ -137,6 +137,19 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated{
   text-align:center;
   font-size:14px;
 }
+//置顶按钮
+.goTopButton{
+  position:absolute;
+  right:10px;bottom:10px;
+  z-index:10;
+  width:40px;height:40px;
+  background:#fff;
+  box-shadow: 0px 0px 5px #888888;
+  border-radius:50%;
+  line-height: 40px;font-size:14px;
+  font-weight: 900;color:#aaa;
+  text-align: center;
+}
 /*热门长篇*/
 .dash-book{
   width:320px;padding:5px;
@@ -235,7 +248,7 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated{
 .dash-book .info .update_time{
   position: absolute;
   right:1px;bottom:-4px;
-  font-size: 8px;
+  font-size: 10px;color:#999;
 }
 /*热门短篇*/
 .dash-story {
@@ -276,18 +289,21 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated{
   }
   .info {
     padding: 5px 10px 0 10px;
+    position: relative;
     .name {
       font-size: 15px;
     }
     .tag {
       font-size: 0;
-      height: 12px;
-      margin:2px 0;
+      width: 80%;
+      min-height: 12px;
+      max-height: 35px;
+      margin: 2px 0;
       div {
         display: inline-block;
         font-size: 8px;
         color: #999;
-        border: 1px solid #bbb;
+        background: #f0f0f0;
         border-radius: 3px;
         line-height: 11px;
         padding: 0 2px;
@@ -313,11 +329,19 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated{
         padding: 0 1px;
         margin-right: 3px;
         color: #999;
-        background: #f0f0f0;
+
+        border: 1px solid #bbb;
         border-radius: 2px;
         font-size: 8px;
         line-height: 13px;
       }
+    }
+    .update_time{
+      position: absolute;
+      right: 16px;
+      bottom: 0;
+      color:#999;
+      font-size:10px;
     }
   }
 }
@@ -326,6 +350,8 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated{
   width:100%;height:38px;
   background:#f8f8f8;
   display: flex;
+  position: relative;
+  z-index: 10;
   div{
     line-height:38px;
     text-align: center;

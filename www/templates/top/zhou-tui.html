@@ -1,14 +1,7 @@
 <ion-view>
-  <div class="sub-header">
-    <div class="btns">
-      <div class="icon ion-ios-arrow-back" ng-click="back()"></div>
-    </div>
-    <div class="title">周推榜</div>
-    <div class="btns">
-      <div class="icon ion-ios-more" style="font-size:24px;"></div>
-    </div>
-  </div>
-
-  <div ng-include="'templates/dash/hot-book.html'"></div>
-
+  <div my-sub-header title="周推榜"></div>
+  <ion-content class="has-sub-header scroll-content ionic-scroll top38">
+    <div ng-bind="currentCtrl"></div>
+    <div>周推</div>
+  </ion-content>
 </ion-view>

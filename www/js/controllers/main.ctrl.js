@@ -2,8 +2,8 @@
  * Created by LIUXIN on 2017/8/14.
  */
 angular.module('strawberry.main.ctrl', [])
-  .controller('mainCtrl', ['$scope', '$rootScope', '$state',
-    function ($scope, $rootScope, $state) {
+  .controller('mainCtrl', ['$scope', '$rootScope', '$state','$ionicPopup','$ionicHistory',
+    function ($scope, $rootScope, $state,$ionicPopup,$ionicHistory) {
       $rootScope.screenHeight_total = window.innerHeight + "px";
       $rootScope.screenHeight_nofoot = window.innerHeight - 47 + "px";
       $rootScope.screenHeight_nohead = window.innerHeight - 38 + "px";
@@ -12,7 +12,7 @@ angular.module('strawberry.main.ctrl', [])
       $rootScope.screenWidth = window.innerWidth + "px";
 
       //弹框设置
-      $scope.modelSet = function (modelMsg, callback) {
+      $rootScope.modelSet = function (modelMsg, callback) {
         var modelSetPopup = $ionicPopup.confirm({
           title: modelMsg,
           scope: $scope,
@@ -37,6 +37,7 @@ angular.module('strawberry.main.ctrl', [])
       $scope.jumpTo = function (path, id) {
         try {
           $state.go(path);
+          //删除重复跳转路由的记录
           for (var i in $rootScope.routerHistory) {
             if ($rootScope.routerHistory[i] == path) {
               return
@@ -53,4 +54,7 @@ angular.module('strawberry.main.ctrl', [])
         $rootScope.routerHistory.splice($rootScope.routerHistory.length - 1, 1);
         $scope.jumpTo($rootScope.routerHistory[$rootScope.routerHistory.length - 1]);
       }
+
+
+
     }]);
