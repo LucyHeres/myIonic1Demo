@@ -59,14 +59,24 @@ angular.module('starter.routers', [])
         templateUrl:'templates/top/index.html',
         abstract: true
       })
-      .state('top.zhoutui',{
-        url:'/zhoutui',
-        templateUrl:'templates/top/zhou-tui.html',
+      .state('top.novel-weekread',{
+        url:'/novel-weekread',
+        templateUrl:'templates/top/novel-weekread.html',
         controller:'topCtrl'
       })
-      .state('top.zuozhe',{
-        url:'/zuozhe',
-        templateUrl:'templates/top/zuo-zhe.html',
+      .state('top.author-read',{
+        url:'/author-read',
+        templateUrl:'templates/top/author-read.html',
+        controller:'topCtrl'
+      })
+      .state('top.novel-reward',{
+        url:'/novel-reward',
+        templateUrl:'templates/top/novel-reward.html',
+        controller:'topCtrl'
+      })
+      .state('top.novel-caomei',{
+        url:'/novel-caomei',
+        templateUrl:'templates/top/novel-caomei.html',
         controller:'topCtrl'
       })
 

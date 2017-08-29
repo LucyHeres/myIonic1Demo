@@ -1,15 +1,22 @@
 <ion-view>
-  <div>sort</div>
-  <div>sort</div>
-  <div>sort</div>
-  <div>sort</div>
-  <div>sort</div><div>sort</div><div>sort</div><div>sort</div><div>sort</div>
-  <div>sort</div>
-  <div>sort</div><div>sort</div>
+  <ion-content>
+    <ion-refresher on-refresh="" pulling-icon="ion-android-arrow-down" pulling-text="下拉更新">
+    </ion-refresher>
+    <div style="width:100%;height:160px;overflow: hidden;background-color: #e6e6e6">
+      <ion-slide-box auto-play="true" does-continue="true" ng-if="carousel.length>0">
+        <ion-slide ng-repeat="item in carousel2">
+          <div style="background-image:url({{item.image}})" class="slider-box"></div>
+        </ion-slide>
+      </ion-slide-box>
+    </div>
 
-
-
-
-
-
+    <div class="sort-box" ng-repeat="item in categoryList">
+      <div class="cover" style="background-image: url('{{item.thumbnail}}')"></div>
+      <div class="name">{{item.name}}</div>
+      <div class="novel_count">
+        <span>共{{item.novel_count}}部</span>
+        <i class="ion-ios-arrow-right"></i>
+      </div>
+    </div>
+  </ion-content>
 </ion-view>

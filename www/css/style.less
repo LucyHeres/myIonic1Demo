@@ -1,257 +1,341 @@
-html{font-size:12px;}
-/*底部tab*/
-.strawberry .tab-item .icon.ion-tab-home{
-  background:url(../img/media/tab/shou-ye.png) no-repeat center;
-  background-size: contain;}
-.strawberry .tab-item .icon.ion-tab-home-active{
-  background:url(../img/media/tab/active/shou-ye.png) no-repeat center;
-  background-size: contain;}
-
-.strawberry .tab-item .icon.ion-tab-bookshelf{
-  background:url(../img/media/tab/shu-jia.png) no-repeat center;
-  background-size: contain;}
-.strawberry .tab-item .icon.ion-tab-bookshelf-active{
-  background:url(../img/media/tab/active/shu-jia.png) no-repeat center;
-  background-size: contain;}
-
-.strawberry .tab-item .icon.ion-tab-publish{
-  background:url(../img/media/tab/fa-bu.png) no-repeat center;
-  background-size: contain;}
-.strawberry .tab-item .icon.ion-tab-publish-active{
-  background:url(../img/media/tab/active/fa-bu.png) no-repeat center;
-  background-size: contain;}
-
-.strawberry .tab-item .icon.ion-tab-loop{
-  background:url(../img/media/tab/quan-zi.png) no-repeat center;
-  background-size: contain;}
-.strawberry .tab-item .icon.ion-tab-loop-active{
-  background:url(../img/media/tab/active/quan-zi-.png) no-repeat center;
-  background-size: contain;}
-
-.strawberry .tab-item .icon.ion-tab-user{
-  background:url(../img/media/tab/wo-de.png) no-repeat center;
-  background-size: contain;}
-.strawberry .tab-item .icon.ion-tab-user-active{
-  background:url(../img/media/tab/active/wo-de-.png) no-repeat center;
-  background-size: contain;}
-
-.strawberry .tab-item .icon{
-  width:18px;
-  height:18px;
+html {
+  font-size: 12px;
 }
+
+/*底部tab*/
+.strawberry .tab-item .icon.ion-tab-home {
+  background: url(../img/media/tab/shou-ye.png) no-repeat center;
+  background-size: contain;
+}
+
+.strawberry .tab-item .icon.ion-tab-home-active {
+  background: url(../img/media/tab/active/shou-ye.png) no-repeat center;
+  background-size: contain;
+}
+
+.strawberry .tab-item .icon.ion-tab-bookshelf {
+  background: url(../img/media/tab/shu-jia.png) no-repeat center;
+  background-size: contain;
+}
+
+.strawberry .tab-item .icon.ion-tab-bookshelf-active {
+  background: url(../img/media/tab/active/shu-jia.png) no-repeat center;
+  background-size: contain;
+}
+
+.strawberry .tab-item .icon.ion-tab-publish {
+  background: url(../img/media/tab/fa-bu.png) no-repeat center;
+  background-size: contain;
+}
+
+.strawberry .tab-item .icon.ion-tab-publish-active {
+  background: url(../img/media/tab/active/fa-bu.png) no-repeat center;
+  background-size: contain;
+}
+
+.strawberry .tab-item .icon.ion-tab-loop {
+  background: url(../img/media/tab/quan-zi.png) no-repeat center;
+  background-size: contain;
+}
+
+.strawberry .tab-item .icon.ion-tab-loop-active {
+  background: url(../img/media/tab/active/quan-zi-.png) no-repeat center;
+  background-size: contain;
+}
+
+.strawberry .tab-item .icon.ion-tab-user {
+  background: url(../img/media/tab/wo-de.png) no-repeat center;
+  background-size: contain;
+}
+
+.strawberry .tab-item .icon.ion-tab-user-active {
+  background: url(../img/media/tab/active/wo-de-.png) no-repeat center;
+  background-size: contain;
+}
+
+.strawberry .tab-item .icon {
+  width: 18px;
+  height: 18px;
+}
+
 .active,
 ion-tabs.strawberry.tabs-color-active-positive .tab-item.tab-item-active,
 ion-tabs.strawberry.tabs-color-active-positive .tab-item.active,
-ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated{
+ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   color: #fb7299;
 }
-.strawberry .tabs{
-  height:47px;
-  padding-top:8px;
+
+.strawberry .tabs {
+  height: 47px;
+  padding-top: 8px;
 }
 
 /*dash*/
-.clear:after{
-  content:"";
-  display:block;
-  clear:both;
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
 }
-.dash-sub-header{
-  background:#f8f8f8;
-  width:100%;height:38px;
-  display:flex;
+
+.dash-sub-header {
+  background: #f8f8f8;
+  width: 100%;
+  height: 38px;
+  display: flex;
   justify-content: center;
 }
-.dash-sub-header div{
-  width:35px;
-  margin:10px 10px 0;
+
+.dash-sub-header div {
+  width: 35px;
+  margin: 10px 10px 0;
   text-align: center;
 }
-.dash-sub-header div span{
-  font-size:15px;
+
+.dash-sub-header div span {
+  font-size: 15px;
 }
-.dash-sub-header div b{
+
+.dash-sub-header div b {
   display: block;
-  margin:0 auto;
-  width:20px;
-  height:3px;
+  margin: 0 auto;
+  width: 20px;
+  height: 3px;
   background: #fb7299;
   visibility: hidden;
 }
-.dash-sub-header div.active{
-  color:#fb7299;
+
+.dash-sub-header div.active {
+  color: #fb7299;
 }
-.dash-sub-header div.active b{
+
+.dash-sub-header div.active b {
   visibility: visible;
 }
-.top38{top:38px !important;}
-.dash-three-box{
-  width:320px;
-  height:100%;
+
+.top38 {
+  top: 38px !important;
 }
-.slider-box{
-  width:320px;
-  height:160px;
-  background:#ddd;
-  background-size:cover;
+
+.dash-three-box {
+  width: 320px;
+  height: 100%;
+}
+
+.slider-box {
+  width: 320px;
+  height: 160px;
+  background: #ddd;
+  background-size: cover;
   background-position: center;
 }
+
+/*************************dash页-推荐页*************************/
 /*广播小喇叭*/
-.broadcast{
+.broadcast {
   width: 305px;
   height: 22px;
   background: #ddd;
   border-radius: 10px;
   margin: 7px auto 3px;
   padding-left: 5px;
-  span{
-    color:#a2a2a2;
-    font-size:12px;
-    margin-right:10px;
+  span {
+    color: #a2a2a2;
+    font-size: 12px;
+    margin-right: 10px;
   }
 }
+
 /*周推榜...四幅图*/
-.dash-row{
-  width:320px;
-  padding:0 5px;
-  padding-top:5px;
+.dash-row {
+  width: 320px;
+  padding: 0 5px;
+  padding-top: 5px;
   display: flex;
   justify-content: center;
 }
-.dash-row div{
-  padding:0 5px;
+
+.dash-row div {
+  padding: 0 5px;
 }
-.dash-row div img{
-  width:100%;height:60px;
+
+.dash-row div img {
+  width: 100%;
+  height: 60px;
 }
-.dash-two-label{
-  width:320px;
-  border:1px solid #f0f0f0;
-  border-left:none;
-  border-right:none;
-  margin-top:10px;
-  padding:0;
+
+.dash-two-label {
+  width: 320px;
+  border: 1px solid #f0f0f0;
+  border-left: none;
+  border-right: none;
+  margin-top: 10px;
+  padding: 0;
 }
-.dash-two-label div{
-  padding:7px;
-  text-align:center;
-  font-size:14px;
-}
-//置顶按钮
-.goTopButton{
-  position:absolute;
-  right:10px;bottom:10px;
-  z-index:10;
-  width:40px;height:40px;
-  background:#fff;
-  box-shadow: 0px 0px 5px #888888;
-  border-radius:50%;
-  line-height: 40px;font-size:14px;
-  font-weight: 900;color:#aaa;
+
+.dash-two-label div {
+  padding: 7px;
   text-align: center;
+  font-size: 14px;
 }
+
+////置顶按钮
+//.goTopButton{
+//  position:absolute;
+//  right:10px;bottom:10px;
+//  z-index:10;
+//  width:40px;height:40px;
+//  background:#fff;
+//  box-shadow: 0px 0px 5px #888888;
+//  border-radius:50%;
+//  line-height: 40px;font-size:14px;
+//  font-weight: 900;color:#aaa;
+//  text-align: center;
+//}
 /*热门长篇*/
-.dash-book{
-  width:320px;padding:5px;
-  border-bottom:1px solid #F0F0F0;
+.bookList {
+  width: 320px;
+  padding: 5px;
+  border-bottom: 1px solid #F0F0F0;
   position: relative;
 }
-.dash-book .cover{
+
+.bookList .cover {
   display: inline-block;
   position: relative;
   width: 85px;
   vertical-align: top;
-  .contract{
+  .contract {
     display: block;
-    width:20px;height:20px;
+    width: 20px;
+    height: 20px;
     background-size: cover;
-    position:absolute;right:-4px;bottom:-4px;
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
   }
 }
-.dash-book .cover .img{
-  width:75px;height:105px;
+
+.bookList .cover .img {
+  width: 75px;
+  height: 105px;
   background-position: center;
   background-size: cover;
   margin: 5px 0 0 5px;
 }
-.dash-book .info{
-  display:inline-block;
-  width:210px;
-  margin-left:5px;
+
+.bookList .info {
+  display: inline-block;
+  width: 210px;
+  margin-left: 5px;
   position: relative;
 }
-.dash-book .info .author{
-  height:18px;
+
+.bookList .info .author {
+  height: 18px;
 }
-.dash-book .info .author div{display:inline-block;}
-.dash-book .info .author .avatar{
-  width:10px;height:10px;
-  border-radius:50%;
-  overflow:hidden;
+
+.bookList .info .author div {
+  display: inline-block;
 }
-.dash-book .info .author .avatar img{
-  width:100%;height:100%;
+
+.bookList .info .author .avatar {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bookList .info .author .avatar img {
+  width: 100%;
+  height: 100%;
   display: block;
 }
-.dash-book .info .author .name{
-  font-size:12px;color:#999;
+
+.bookList .info .author .name {
+  font-size: 12px;
+  color: #999;
   line-height: 14px;
 }
-.dash-book .info .tag{
+
+.bookList .info .tag {
   font-size: 0;
-  height: 12px;margin:2px 0;
+  width: 170px;
+  min-height: 15px;
+  max-height: 35px;
+  overflow: hidden;
 }
-.dash-book .info .tag div{
+
+.bookList .info .tag div {
   display: inline-block;
   font-size: 8px;
   color: #999;
-  border: 1px solid #bbb;
-  border-radius: 3px;
+  background: #f0f0f0;
   line-height: 11px;
   padding: 0 2px;
-  margin-right: 3px;
+  margin-right: 10px;
 }
-.dash-book .info .desc{
+
+.bookList .info .desc {
   height: 32px;
-  color:#666;
+  color: #666;
   font-size: 12px;
   line-height: 16px;
   overflow: hidden;
-  margin:5px 0;
+  margin: 5px 0;
 }
-.dash-book .info .category{
+
+.bookList .info .category {
   overflow: hidden;
   font-size: 0;
   max-height: 35px;
   height: 15px;
-  div{
+  div {
     display: inline-block;
     padding: 0 1px;
     margin-right: 3px;
     color: #999;
-    background: #f0f0f0;
+    border: 1px solid #bbb;
     border-radius: 2px;
     font-size: 8px;
     line-height: 13px;
   }
 }
-.dash-book .info .status{
-  position:absolute;
-  right:0;top:0;
+
+.bookList .info .status {
+  position: absolute;
+  right: 0;
+  top: 3px;
   font-size: 9px;
   line-height: 15px;
-  color:#fff;
-  background:#ffbf00;
-  padding:0 5px;
-  border-radius:3px;
+  color: #fff;
+  background: #ffbf00;
+  padding: 0 5px;
+  border-radius: 3px;
+  &.finish {
+    background: #3399FF;
+  }
 }
-.dash-book .info .update_time{
+
+.bookList .info .update_time {
   position: absolute;
-  right:1px;bottom:-4px;
-  font-size: 10px;color:#999;
+  right: 1px;
+  bottom: -4px;
+  font-size: 10px;
+  color: #999;
 }
+
+.bookList .top-icon {
+  height: 100%;
+  min-width: 100px;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 3px;
+  z-index: -1;
+}
+
 /*热门短篇*/
-.dash-story {
+.storyList {
   width: 320px;
   padding: 10px 0;
   border-bottom: 1px solid #F0F0F0;
@@ -310,21 +394,21 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated{
         margin-right: 3px;
       }
     }
-    .desc{
+    .desc {
       font-size: 12px;
       line-height: 16px;
       color: #999;
       min-height: 16px;
       max-height: 32px;
       overflow: hidden;
-      margin:5px 0;
+      margin: 5px 0;
     }
-    .category{
+    .category {
       overflow: hidden;
       font-size: 0;
       max-height: 35px;
       height: 15px;
-      div{
+      div {
         display: inline-block;
         padding: 0 1px;
         margin-right: 3px;
@@ -336,33 +420,183 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated{
         line-height: 13px;
       }
     }
-    .update_time{
+    .update_time {
       position: absolute;
       right: 16px;
       bottom: 0;
-      color:#999;
-      font-size:10px;
+      color: #999;
+      font-size: 10px;
     }
   }
 }
-/*定义头部样式*/
-.sub-header{
-  width:100%;height:38px;
-  background:#f8f8f8;
+
+/*定义通用头部样式*/
+.sub-header {
+  width: 100%;
+  height: 38px;
+  background: #f8f8f8;
   display: flex;
   position: relative;
   z-index: 10;
-  div{
-    line-height:38px;
+  div {
+    line-height: 38px;
     text-align: center;
   }
-  .btns{
+  .btns {
     width: 30px;
-    font-size:20px;
+    font-size: 20px;
   }
-  .title{
+  .title {
     width: 260px;
-    font-size:15px;
+    font-size: 15px;
   }
 }
+
+/*****************************dash页-分类页****************************/
+.sort-box {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  .cover {
+    display: inline-block;
+    width: 95px;
+    height: 76px;
+    background-position: center;
+    background-size: cover;
+    vertical-align: middle;
+  }
+  .name {
+    display: inline-block;
+    margin: 0 100px 0 5px;
+  }
+  .novel_count {
+    display: inline-block;
+  }
+}
+
+/*****************************dash页-搜索页****************************/
+.search-box {
+  width: 100%;
+  height: 42px;
+  padding: 15px 10px 5px 10px;
+  .search {
+    width: 100%;
+    height: 22px;
+    background: #e5e5e5;
+    border-radius: 20px;
+    position: relative;
+    padding: 0 8px;
+    line-height: 22px;
+    .left {
+      display: inline-block;
+    }
+    .right {
+      display: inline-block;
+    }
+    input {
+      width: 253px;
+      height: 22px;
+      position: relative;
+      top: -2px;
+      display: inline-block;
+      background: transparent;
+    }
+  }
+}
+
+.hot-search {
+  width: 100%;
+  padding: 10px;
+  div.name {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    color: #999;
+    padding: 1px 5px;
+    border: 1px solid #f0f0f0;
+  }
+}
+
+.search-tabs {
+  display: flex;
+  justify-content: space-around;
+  div {
+    width: 34%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+  }
+  div.active {
+    color: #fb7299;
+    border-bottom: 2px solid #fb7299;
+  }
+}
+
+/*****************************dash页-top榜****************************/
+.userList {
+  width:320px;
+  position: relative;
+  .headImg {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    img {
+      width: 100%;
+    }
+  }
+  .desc {
+    width: 100%;
+    height: 70px;
+    border: 1px solid #f0f0f0;
+    padding: 15px 15px 15px 70px;
+    line-height: 50px;
+    .nickName {
+      line-height: 20px;
+      color: #49be38;
+    }
+    .sign {
+      line-height: 20px;
+      font-size: 10px;
+      width: 170px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .attention {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    padding: 0px 5px;
+    font-size: 12px;
+    background: #fb7299;
+    color: #fff;
+    border-radius: 5px;
+    &.pay {
+      background: #fff;
+      color: #999;
+      border: 1px solid #999;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 

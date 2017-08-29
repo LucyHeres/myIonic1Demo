@@ -1,4 +1,4 @@
-<div class="dash-book" ng-repeat="item in bookList">
+
   <div class="cover">
     <div class="img" style="background-image:url({{item.cover_url}})" ng-if="item.cover_url"></div>
     <div class="img" style="background-image:url('img/media/long_default.png')" ng-if="!item.cover_url"></div>
@@ -13,20 +13,21 @@
       <div class="name" ng-bind="item.author.nick_name"></div>
     </div>
     <div class="book_name" ng-bind="item.name"></div>
-    <div class="tag">
-      <div ng-repeat="tag in item.tags track by $index" ng-if="tag" ng-bind="tag"></div>
+    <div class="category">
+      <div ng-repeat="category in item.categories" ng-if="category">
+        {{category.name}}
+      </div>
     </div>
     <div class="desc" ng-if="item.desc!=''" ng-bind="item.desc"></div>
     <div class="desc" ng-if="item.desc==''">暂无简介</div>
-    <div class="category">
-      <div ng-repeat="category in item.categories" ng-if="category">
-        <strong>#</strong>{{category.name}}<strong>#</strong>
+    <div class="tag">
+      <div ng-repeat="tag in item.tags track by $index" ng-if="tag">
+        <strong>#</strong>{{tag}}<strong>#</strong>
       </div>
     </div>
-    <div class="status" ng-if="book.serial_status=='ongoing'">连载</div>
-    <div class="status" ng-if="book.serial_status=='finish'">完结</div>
+    <div class="status" ng-if="item.serial_status=='ongoing'">连载</div>
+    <div class="status finish" ng-if="item.serial_status=='finish'">完结</div>
     <div class="update_time" ng-bind-html="item.update_time.$date | date:'MM-dd'"></div>
   </div>
-</div>
 
 

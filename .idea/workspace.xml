@@ -2,26 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05f98715-5139-4fed-a4c2-302ebe4908de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic/js/jquery-3.1.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/controllers/top.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/top/author-read.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/top/novel-caomei.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/top/novel-reward.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/top/novel-tpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/top/novel-weekread.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/tpls/storyList.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/tpls/userList.html" />
+      <change type="DELETED" beforePath="D:\Program Files (x86)\my project\myIonic1Demo\www\templates\dash\hot-story.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Program Files (x86)\my project\myIonic1Demo\www\templates\top\cao-mei.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Program Files (x86)\my project\myIonic1Demo\www\templates\top\da-shang.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Program Files (x86)\my project\myIonic1Demo\www\templates\top\zhou-tui.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Program Files (x86)\my project\myIonic1Demo\www\templates\top\zuo-zhe.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers/dash.ctrl.js" afterPath="$PROJECT_DIR$/www/js/controllers/dash.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/directives.js" afterPath="$PROJECT_DIR$/www/js/directives.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/dash/hot-book.html" afterPath="$PROJECT_DIR$/www/templates/dash/hot-book.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/dash/hot-story.html" afterPath="$PROJECT_DIR$/www/templates/dash/hot-story.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/top/index.html" afterPath="$PROJECT_DIR$/www/templates/top/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers/main.ctrl.js" afterPath="$PROJECT_DIR$/www/js/controllers/main.ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/dash/recommend.html" afterPath="$PROJECT_DIR$/www/templates/dash/recommend.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/routers.js" afterPath="$PROJECT_DIR$/www/js/routers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/dash/search.html" afterPath="$PROJECT_DIR$/www/templates/dash/search.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/services.js" afterPath="$PROJECT_DIR$/www/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/dash/sort.html" afterPath="$PROJECT_DIR$/www/templates/dash/sort.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/style.css" afterPath="$PROJECT_DIR$/www/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/style.less" afterPath="$PROJECT_DIR$/www/css/style.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers/top.ctrl.js" afterPath="$PROJECT_DIR$/www/js/controllers/top.ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/top/zhou-tui.html" afterPath="$PROJECT_DIR$/www/templates/top/zhou-tui.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/top/zuo-zhe.html" afterPath="$PROJECT_DIR$/www/templates/top/zuo-zhe.html" />
+      <change type="MOVED" beforePath="D:\Program Files (x86)\my project\myIonic1Demo\www\templates\dash\hot-book.html" afterPath="$PROJECT_DIR$/www/templates/tpls/bookList.html" />
     </list>
     <ignored path="myIonic1Demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,31 +46,55 @@
     <favorites_list name="myIonic1Demo" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.789731">
+    <splitter split-orientation="horizontal" split-proportion="0.65340906">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/www/index.html">
+          <file leaf-file-name="recommend.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/www/templates/dash/recommend.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.018868">
-                  <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+                <state vertical-scroll-proportion="-6.015873">
+                  <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="recommend.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/www/templates/dash/recommend.html">
+          <file leaf-file-name="tab-dash.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-17.566038">
-                  <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#ion-slide#0;n#ion-slide-box#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#img#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#marquee#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#4;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                  </folding>
+                <state vertical-scroll-proportion="-0.41509435">
+                  <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="novel-caomei.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/www/templates/top/novel-caomei.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-1.4339622">
+                  <caret line="4" column="37" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="37" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="novel-tpl.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/www/templates/top/novel-tpl.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.31034482">
+                  <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="userList.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/www/templates/tpls/userList.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-3.0434783">
+                  <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -73,78 +102,22 @@
           <file leaf-file-name="top.ctrl.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/www/js/controllers/top.ctrl.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-5.12">
-                  <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+                <state vertical-scroll-proportion="-17.72">
+                  <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dash.ctrl.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/www/js/controllers/dash.ctrl.js">
+          <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/www/templates/dash/search.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-3.0">
-                  <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+                <state vertical-scroll-proportion="-5.621212">
+                  <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
                   <folding>
-                    <element signature="e#1213#1551#0" expanded="false" />
-                    <element signature="e#1595#1843#0" expanded="false" />
-                    <element signature="e#1887#2633#0" expanded="false" />
-                    <element signature="e#2678#3430#0" expanded="false" />
+                    <element signature="n#style#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/www/js/app.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-2.16">
-                  <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/www/templates/top/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.0">
-                  <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.ctrl.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/www/js/controllers/main.ctrl.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-12.68">
-                  <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="54" selection-end-column="85" />
-                  <folding>
-                    <element signature="e#656#1128#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="directives.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/www/js/directives.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.41022098">
-                  <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-                  <folding>
-                    <marker date="1503654855653" expanded="true" signature="459:474" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="zhou-tui.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/www/templates/top/zhou-tui.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-2.7924528">
-                  <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -153,14 +126,64 @@
       </split-first>
       <split-second>
         <leaf>
+          <file leaf-file-name="dash.ctrl.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/www/js/controllers/dash.ctrl.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-7.32">
+                  <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+                  <folding>
+                    <element signature="e#1696#2068#0" expanded="false" />
+                    <element signature="e#3042#3933#0" expanded="false" />
+                    <element signature="e#3078#3899#0" expanded="false" />
+                    <element signature="e#3974#4096#0" expanded="false" />
+                    <element signature="e#4873#5289#0" expanded="false" />
+                    <element signature="e#6360#6373#0" expanded="false" />
+                    <element signature="e#6599#6979#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/www/js/services.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-20.76">
+                  <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#1164#1645#0" expanded="false" />
+                    <element signature="e#1679#2082#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="style.less" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/www/css/style.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3275862">
-                  <caret line="356" column="23" selection-start-line="356" selection-start-column="23" selection-end-line="356" selection-end-column="23" />
+                <state vertical-scroll-proportion="0.36956522">
+                  <caret line="537" column="14" selection-start-line="537" selection-start-column="14" selection-end-line="537" selection-end-column="14" />
                   <folding>
-                    <element signature="e#6535#6701#0" expanded="false" />
+                    <element signature="e#2758#2959#0" expanded="false" />
+                    <element signature="e#2985#3086#0" expanded="false" />
+                    <element signature="e#3102#3123#0" expanded="false" />
+                    <element signature="e#3143#3177#0" expanded="false" />
+                    <element signature="e#3195#3320#0" expanded="false" />
+                    <element signature="e#3342#3402#0" expanded="false" />
+                    <element signature="e#5706#5795#0" expanded="false" />
+                    <element signature="e#7064#7231#0" expanded="false" />
+                    <element signature="e#7594#7705#0" expanded="false" />
+                    <element signature="e#7738#8014#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="storyList.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/www/templates/tpls/storyList.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-7.5471697">
+                  <caret line="16" column="17" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="17" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -173,8 +196,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Less File" />
-        <option value="Html5" />
         <option value="JavaScript File" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -192,8 +215,6 @@
         <option value="$PROJECT_DIR$/www/templates/tab-publish.html" />
         <option value="$PROJECT_DIR$/www/templates/tab-loop.html" />
         <option value="$PROJECT_DIR$/www/templates/tab-bookshelf.html" />
-        <option value="$PROJECT_DIR$/www/templates/dash/sort.html" />
-        <option value="$PROJECT_DIR$/www/templates/dash/search.html" />
         <option value="$PROJECT_DIR$/www/js/controllers/user.ctrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/publish.ctrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/loop.ctrl.js" />
@@ -207,25 +228,34 @@
         <option value="$PROJECT_DIR$/www/css/mystyle.css" />
         <option value="$PROJECT_DIR$/www/css/style.css" />
         <option value="$PROJECT_DIR$/scss/ionic.app.scss" />
+        <option value="$PROJECT_DIR$/www/templates/tab-dash.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers.js" />
+        <option value="$PROJECT_DIR$/www/js/app.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers/main.ctrl.js" />
+        <option value="$PROJECT_DIR$/www/js/directives.js" />
+        <option value="$PROJECT_DIR$/www/templates/dash/sort.html" />
+        <option value="$PROJECT_DIR$/www/templates/dash/hot-book.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers/dash.ctrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/dash/hot-story.html" />
+        <option value="$PROJECT_DIR$/www/js/services.js" />
         <option value="$PROJECT_DIR$/www/templates/top/da-shang.html" />
         <option value="$PROJECT_DIR$/www/templates/top/cao-mei.html" />
-        <option value="$PROJECT_DIR$/www/templates/tab-dash.html" />
-        <option value="$PROJECT_DIR$/www/templates/dash/hot-book.html" />
-        <option value="$PROJECT_DIR$/www/templates/dash/hot-story.html" />
-        <option value="$PROJECT_DIR$/www/js/controllers.js" />
-        <option value="$PROJECT_DIR$/www/js/services.js" />
-        <option value="$PROJECT_DIR$/www/css/style.less" />
-        <option value="$PROJECT_DIR$/www/templates/top/zuo-zhe.html" />
-        <option value="$PROJECT_DIR$/www/js/app.js" />
-        <option value="$PROJECT_DIR$/www/js/routers.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers/dash.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/js/controllers/top.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers/main.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/templates/dash/recommend.html" />
-        <option value="$PROJECT_DIR$/www/templates/top/index.html" />
-        <option value="$PROJECT_DIR$/www/js/directives.js" />
         <option value="$PROJECT_DIR$/www/templates/top/zhou-tui.html" />
+        <option value="$PROJECT_DIR$/www/templates/top/zuo-zhe.html" />
+        <option value="$PROJECT_DIR$/www/js/routers.js" />
+        <option value="$PROJECT_DIR$/www/templates/top/novel-reward.html" />
+        <option value="$PROJECT_DIR$/www/templates/top/novel-weekread.html" />
+        <option value="$PROJECT_DIR$/www/templates/top/novel-caomei.html" />
+        <option value="$PROJECT_DIR$/www/templates/dash/bookList.html" />
+        <option value="$PROJECT_DIR$/www/templates/top/index.html" />
+        <option value="$PROJECT_DIR$/www/templates/top/author-read.html" />
+        <option value="$PROJECT_DIR$/www/templates/dash/recommend.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers/top.ctrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/tpls/userList.html" />
+        <option value="$PROJECT_DIR$/www/templates/dash/search.html" />
+        <option value="$PROJECT_DIR$/www/css/style.less" />
+        <option value="$PROJECT_DIR$/www/templates/top/novel-tpl.html" />
       </list>
     </option>
   </component>
@@ -296,8 +326,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -345,6 +375,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myIonic1Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myIonic1Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tpls" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -442,6 +494,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myIonic1Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myIonic1Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style.less" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myIonic1Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myIonic1Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="scss" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -469,6 +561,7 @@
       <recent name="D:\MYproject\myIonic1Demo\www\img\media\slider" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Program Files (x86)\my project\myIonic1Demo\www\templates\tpls" />
       <recent name="D:\Program Files (x86)\my project\myIonic1Demo\www\img" />
     </key>
   </component>
@@ -547,7 +640,13 @@
       <option name="project" value="LOCAL" />
       <updated>1503487837676</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="8.25">
+      <created>1503654880205</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1503654880205</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -555,12 +654,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16145833" sideWeight="0.51329786" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13255568" sideWeight="0.4867021" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16012725" sideWeight="0.4867021" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19264069" sideWeight="0.51896733" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.49702382" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35243243" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32575756" sideWeight="0.49702382" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756758" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15891892" sideWeight="0.48103267" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16145833" sideWeight="0.51329786" order="3" side_tool="true" content_ui="tabs" />
@@ -571,7 +671,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35243243" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -589,32 +688,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="8.23" />
-    <option name="LAST_COMMIT_MESSAGE" value="8.23" />
+    <MESSAGE value="8.25" />
+    <option name="LAST_COMMIT_MESSAGE" value="8.25" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,20 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/dash/sort.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.509434">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/dash/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6603775">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers/user.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.56">
@@ -761,31 +832,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9320809">
-          <caret line="212" column="12" selection-start-line="212" selection-start-column="12" selection-end-line="212" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/img/story-img.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/top/da-shang.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04935065">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/top/cao-mei.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0987013">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/lib/ionic/css/ionic.css">
@@ -803,32 +852,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8666667">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/lib/ionic/js/jquery-3.1.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/dash/hot-book.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.037736">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/dash/hot-story.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61470586">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -836,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.48">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -861,135 +887,222 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3275862">
-          <caret line="356" column="23" selection-start-line="356" selection-start-column="23" selection-end-line="356" selection-end-column="23" />
-          <folding>
-            <element signature="e#6535#6701#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/top/zuo-zhe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.35849056">
-          <caret line="1" column="72" selection-start-line="1" selection-start-column="72" selection-end-line="1" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.111878455">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/main.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13692947">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30524862">
+          <caret line="96" column="1" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/dash/sort.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.169811">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1104972">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        <state vertical-scroll-proportion="-20.76">
+          <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
           <folding>
-            <element signature="e#985#1466#0" expanded="false" />
-            <element signature="e#1500#1903#0" expanded="false" />
+            <element signature="e#1164#1645#0" expanded="false" />
+            <element signature="e#1679#2082#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/dash.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.32">
+          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+          <folding>
+            <element signature="e#1696#2068#0" expanded="false" />
+            <element signature="e#3042#3933#0" expanded="false" />
+            <element signature="e#3078#3899#0" expanded="false" />
+            <element signature="e#3974#4096#0" expanded="false" />
+            <element signature="e#4873#5289#0" expanded="false" />
+            <element signature="e#6360#6373#0" expanded="false" />
+            <element signature="e#6599#6979#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/routers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12016574">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        <state vertical-scroll-proportion="-19.44">
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+    <entry file="file://$PROJECT_DIR$/www/templates/tpls/storyList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.16">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.5471697">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/dash.ctrl.js">
+    <entry file="file://$PROJECT_DIR$/www/templates/top/novel-reward.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0">
-          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+        <state vertical-scroll-proportion="-1.4776119">
+          <caret line="3" column="68" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tpls/bookList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54347825">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding>
-            <element signature="e#1213#1551#0" expanded="false" />
-            <element signature="e#1595#1843#0" expanded="false" />
-            <element signature="e#1887#2633#0" expanded="false" />
-            <element signature="e#2678#3430#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/top.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.12">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/dash/recommend.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.566038">
-          <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#ion-slide#0;n#ion-slide-box#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#marquee#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#4;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/top/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.018868">
-          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/main.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.68">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="54" selection-end-column="85" />
-          <folding>
-            <element signature="e#656#1128#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/top/zhou-tui.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7924528">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41022098">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.7044199">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding>
-            <marker date="1503654855653" expanded="true" signature="459:474" placeholder="..." />
+            <marker date="1503884340751" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/top/novel-weekread.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15905744">
+          <caret line="3" column="68" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/top/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.053019147">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/top/author-read.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21828909">
+          <caret line="4" column="61" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/top.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.72">
+          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tpls/userList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0434783">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36956522">
+          <caret line="537" column="14" selection-start-line="537" selection-start-column="14" selection-end-line="537" selection-end-column="14" />
+          <folding>
+            <element signature="e#2758#2959#0" expanded="false" />
+            <element signature="e#2985#3086#0" expanded="false" />
+            <element signature="e#3102#3123#0" expanded="false" />
+            <element signature="e#3143#3177#0" expanded="false" />
+            <element signature="e#3195#3320#0" expanded="false" />
+            <element signature="e#3342#3402#0" expanded="false" />
+            <element signature="e#5706#5795#0" expanded="false" />
+            <element signature="e#7064#7231#0" expanded="false" />
+            <element signature="e#7594#7705#0" expanded="false" />
+            <element signature="e#7738#8014#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/dash/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.621212">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/dash/recommend.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.015873">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.41509435">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/top/novel-caomei.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4339622">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/top/novel-tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31034482">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -23,6 +23,10 @@
     <file url="file://$PROJECT_DIR$/www/templates/tab-loop.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/tab-publish.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/tab-user.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/www/templates/top/zuo-zhe.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/top/author-read.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/top/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/top/novel-caomei.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/top/novel-reward.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/tpls/storyList.html" charset="UTF-8" />
   </component>
 </project>

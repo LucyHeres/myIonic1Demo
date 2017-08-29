@@ -6,7 +6,11 @@ angular.module('starter.services', [])
       getCarousel: "/api/carousel/list/",
       getBookList: "/api/novel/list/",
       getStoryList: "/api/story/list/",
-      getBroadcast:"/api/broadcast/list/"
+      getBroadcast:"/api/broadcast/list/",
+      getCarousel2: "/api/carousel-in-category/list/",
+      getCategoryList: "/api/category/list/",
+      getHotSearch: "/api/hot-keywords/list/",
+      getTopList: "/api/top/"
     }
     var popError=false;//是否已弹出过错误提示
     var _get = function (url, options, params) {
@@ -67,6 +71,7 @@ angular.module('starter.services', [])
     }
 
     return {
+      //dash页-推荐页
       getCarousel: function (options) {
         _get(data.getCarousel, options);
       },
@@ -78,8 +83,24 @@ angular.module('starter.services', [])
       },
       getBroadcast:function(options){
         _get(data.getBroadcast,options);
+      },
+      //dash页-分类页
+      getCarousel2:function(options){
+        _get(data.getCarousel2,options);
+      },
+      getCategoryList:function(options){
+        _get(data.getCategoryList,options);
+      },
+      //dash页-搜索页
+      getHotSearch:function(options){
+        _get(data.getHotSearch,options);
+      },
+      search:function(options,params){
+        _get('/api/'+params.type+'/list/',options,params);
+      },
+      getTopList:function(options,type,params){
+        _get(data.getTopList+type+'/',options,{limit:10,skip:params});
       }
-
     }
   }
   ])

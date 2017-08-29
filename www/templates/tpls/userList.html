@@ -1,0 +1,10 @@
+<div class="headImg">
+  <img ng-src="{{item.head_img}}" ng-if="item.head_img" alt=""/>
+  <img src="img/media/default_avatar.png" ng-if="!item.head_img" alt="">
+</div>
+<div class="desc">
+  <div class="nickName">{{item.nick_name}}</div>
+  <div class="sign">{{item.signature}}</div>
+</div>
+<div class="attention pay" ng-if="payAttention">已关注</div>
+<div class="attention" ng-if="!payAttention">加关注</div>

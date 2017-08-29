@@ -1,16 +1,43 @@
 <ion-view>
-  <div>search</div>
-  <div>search</div>
-  <div>search</div>
-  <div>search</div>
-  <div>search</div>
-  <div>search</div>
-  <div>search</div>
-  <div>search</div>
-  <div>search</div>
-  <div>search</div>
-  <div>search</div>
-  <div>search</div>
+  <ion-content>
+    <div class="search-box">
+      <form name="searchForm" novalidate="novalidate" ng-submit="search()">
+        <div class="list">
+          <label class="item item-input search">
+            <i class="left icon ion-ios-search"></i>
+            <input type="text" ng-model="searchData.keyword" placeholder="输入你要搜索的小说名">
+            <i class="right icon ion-ios-close-outline"></i>
+          </label>
+        </div>
+      </form>
+    </div>
+    <div ng-if="bookListSearch" style="position:absolute;z-index:10;background:#fff;">
+      <div class="search-tabs">
+        <div ng-class="{'active':search_type=='novel'}" ng-click="changeType_search('novel')">长篇</div>
+        <div ng-class="{'active':search_type=='story'}" ng-click="changeType_search('story')">短篇</div>
+        <div ng-class="{'active':search_type=='user'}" ng-click="changeType_search('user')">用户</div>
+      </div>
+      <div style="width:100%;">
 
 
+        <div class="bookList" ng-repeat="item in bookListSearch" ng-show="search_type=='novel'">
+          <div ng-include="'templates/tpls/bookList.html'"></div>
+        </div>
+        <div class="storyList" ng-repeat="item in bookListSearch" ng-show="search_type=='story'">
+          <div ng-include="'templates/tpls/storyList.html'"></div>
+        </div>
+        <div class="userList" ng-repeat="item in bookListSearch" ng-show="search_type=='user'">
+          <div ng-include="'templates/tpls/userList.html'"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hot-search">
+      <div style="margin-bottom:5px;">热门搜索</div>
+      <div class="name" ng-repeat="item in hotSearchList">
+        {{item.keyword}}
+      </div>
+    </div>
+
+  </ion-content>
 </ion-view>
