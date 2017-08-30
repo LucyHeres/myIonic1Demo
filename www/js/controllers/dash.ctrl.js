@@ -2,8 +2,8 @@
  * Created by LIUXIN on 2017/8/14.
  */
 angular.module('strawberry.dash.ctrl', ['starter.services'])
-  .controller('dashCtrl', ['$scope', '$rootScope', '$$strawberry', '$ionicSlideBoxDelegate', '$ionicPosition', '$ionicScrollDelegate', '$timeout',
-    function ($scope, $rootScope, $$strawberry, $ionicSlideBoxDelegate, $ionicPosition, $ionicScrollDelegate, $timeout) {
+  .controller('dashCtrl', ['$scope', '$rootScope', '$$strawberry', '$ionicSlideBoxDelegate','$localStorage',
+    function ($scope, $rootScope, $$strawberry, $ionicSlideBoxDelegate,$localStorage) {
 
       angular.element(document.querySelector(".dash-three-box")).css("min-height", $rootScope.screenHeight_content);
       //dash-three-box切换
@@ -174,30 +174,59 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
       /*       搜索页      */
 
       //搜索结果三种
-      $scope.search_type='novel';
-      $scope.changeType_search=function(type){
-        $scope.search_type=type;
+      $scope.search_type = 'novel';
+      $scope.changeType_search = function (type) {
+        $scope.search_type = type;
         $scope.search();
       }
       //搜索功能
-      $scope.searchData = {}
+      $scope.searchData = {};
+      $scope.showResultBox = false;
       $scope.search = function () {
+        $scope.showResultBox = true;
+        //$$strawberry.clearSearchHistory();
+        var a = $$strawberry.getSearchHistory('searchHistory');
+        console.log(a);
+        var b= a.push($scope.searchData.keyword);
+        console.log(b);
+        $$strawberry.setSearchHistory('searchHistory',b);
         $$strawberry.search({
           onSuccess: function (data) {
             if (!data.error) {
-              console.log("关键字查找成功", data.result);
-              $scope.bookListSearch=data.result;
+              console.log("关键字查找成功", $scope.search_type, data.result);
+              $scope.bookListSearch = data.result;
             } else {
-              console.log("关键字查找失败", data.error);
+              console.log("关键字查找失败", $scope.search_type, data.error);
             }
           },
           onError: function () {
           }
-        },{type: $scope.search_type,
+        }, {
+          type: $scope.search_type,
           name__contains: $scope.searchData.keyword,
           nick_name__contains: $scope.searchData.keyword,
-          limit: 2000});
+          limit: 2000
+        });
       }
+      //清空输入框
+      $scope.resetInput = function () {
+        $scope.searchData.keyword = "";
+      }
+
+      //获得焦点后显示 历史搜索记录
+      $scope.showSearchHistory = function () {
+      //  $scope.searchHistory = $localStorage.getObject('searchHistory');
+      //console.log("@@@@@@@@@@@@@@@@",$scope.searchHistory);
+    }
+      //监听输入框
+      $scope.$watch('searchData.keyword', function () {
+        if (!$scope.searchData.keyword) {
+          $scope.showResultBox = false;
+        } else {
+          $scope.search();
+        }
+
+      });
 
       //热门搜索
       function getHotSearch() {
@@ -214,6 +243,11 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
 
           }
         })
+      }
+
+      //点击热门词
+      $scope.hotSearch = function (hotWord) {
+        $scope.searchData.keyword = hotWord;
       }
 
       //初始化

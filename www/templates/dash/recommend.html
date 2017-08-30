@@ -62,7 +62,8 @@
     <ion-infinite-scroll
       on-infinite="getMoreData()"
       distance="1%"
-      ng-if="has_more">
+      immediate-check="false"
+      ng-if="has_more"></ion-infinite-scroll>
 
   </ion-content>
 
