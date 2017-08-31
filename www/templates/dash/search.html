@@ -4,13 +4,20 @@
       <form name="searchForm" novalidate="novalidate" ng-submit="search()">
         <div class="list search">
           <i class="left icon ion-ios-search"></i>
-          <input type="text" ng-model="searchData.keyword">
+          <input id="searchInput" type="text" ng-model="searchData.keyword" ng-focus="inputFocus()" >
           <i class="right icon ion-ios-close-outline" ng-click="resetInput()"></i>
-
         </div>
       </form>
     </div>
-
+    <div class="history" ng-if="showSearchHistory">
+      <div style="padding:0 10px 3px;">搜索记录</div>
+      <div class="historyList" ng-repeat="item in searchHistory | limitTo: limit track by $index ">
+        <div style="display: inline-block;" ng-click="hotSearch(item)">{{item}}</div>
+        <i class="icon ion-ios-close-empty closeBtn" ng-click="deleteHistory($index)"></i>
+      </div>
+      <div style="padding:5px 10px;text-align:center;" ng-if="!showAll" ng-click="deleteHistoryAll()">清除所有记录</div>
+      <div style="padding:5px 10px;text-align:center;" ng-if="showAll" ng-click="showHistoryAll()">全部搜索记录</div>
+    </div>
     <div ng-if="showResultBox" style="width:100%;height:100%;position:absolute;z-index:10;background:#fff;">
       <div class="search-tabs">
         <div ng-class="{'active':search_type=='novel'}" ng-click="changeType_search('novel')">长篇</div>

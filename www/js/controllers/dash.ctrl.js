@@ -2,8 +2,8 @@
  * Created by LIUXIN on 2017/8/14.
  */
 angular.module('strawberry.dash.ctrl', ['starter.services'])
-  .controller('dashCtrl', ['$scope', '$rootScope', '$$strawberry', '$ionicSlideBoxDelegate','$localStorage',
-    function ($scope, $rootScope, $$strawberry, $ionicSlideBoxDelegate,$localStorage) {
+  .controller('dashCtrl', ['$scope', '$rootScope', '$$strawberry', '$ionicSlideBoxDelegate',
+    function ($scope, $rootScope, $$strawberry, $ionicSlideBoxDelegate) {
 
       angular.element(document.querySelector(".dash-three-box")).css("min-height", $rootScope.screenHeight_content);
       //dash-three-box切换
@@ -182,14 +182,29 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
       //搜索功能
       $scope.searchData = {};
       $scope.showResultBox = false;
+      //添加搜索记录
+      function addSearchHistory(keyword) {
+        //localStorage.clear();
+        if (!localStorage['searchHistory']) {
+          localStorage.setItem('searchHistory', JSON.stringify([]));
+        }
+        var arr = JSON.parse(localStorage['searchHistory']);
+        for (var i in arr) {
+          if (keyword == arr[i]) {
+            return;
+          }
+        }
+        arr.unshift(keyword);
+        localStorage.setItem('searchHistory', JSON.stringify(arr));
+      }
+
+      //input表单submit后自动搜索
       $scope.search = function () {
         $scope.showResultBox = true;
-        //$$strawberry.clearSearchHistory();
-        var a = $$strawberry.getSearchHistory('searchHistory');
-        console.log(a);
-        var b= a.push($scope.searchData.keyword);
-        console.log(b);
-        $$strawberry.setSearchHistory('searchHistory',b);
+        $scope.showSearchHistory = false;
+        //添加搜索记录
+        addSearchHistory($scope.searchData.keyword);
+
         $$strawberry.search({
           onSuccess: function (data) {
             if (!data.error) {
@@ -214,18 +229,44 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
       }
 
       //获得焦点后显示 历史搜索记录
-      $scope.showSearchHistory = function () {
-      //  $scope.searchHistory = $localStorage.getObject('searchHistory');
-      //console.log("@@@@@@@@@@@@@@@@",$scope.searchHistory);
-    }
-      //监听输入框
+      $scope.showSearchHistory = false;
+      $scope.limit = 2;
+      $scope.inputFocus = function () {
+        if (!localStorage['searchHistory']) {
+          localStorage.setItem('searchHistory', JSON.stringify([]));
+        }
+        $scope.searchHistory = JSON.parse(localStorage['searchHistory']);
+        console.log("查询到localstorage中的searchHistory", $scope.searchHistory);
+        if ($scope.searchHistory.length > 0) {
+          $scope.showSearchHistory = true;
+        } else {
+          $scope.showSearchHistory = false;
+        }
+      }
+      //清空单个搜索记录
+      $scope.deleteHistory = function (index) {
+        var arr = JSON.parse(localStorage['searchHistory']);
+        arr.splice(index, 1);
+        localStorage.setItem('searchHistory', JSON.stringify(arr));
+        $scope.inputFocus();//刷新
+      }
+      //"全部搜索记录"
+      $scope.showAll = true;
+      $scope.showHistoryAll = function () {
+        $scope.showAll = false;
+        $scope.limit = 10;
+        $scope.inputFocus();//刷新
+      }
+      //"清除所有记录"
+      $scope.deleteHistoryAll = function () {
+        localStorage.removeItem('searchHistory');
+        $scope.inputFocus();//刷新
+      }
+      //监听输入框 为空的时候 隐藏搜索结果区域
       $scope.$watch('searchData.keyword', function () {
         if (!$scope.searchData.keyword) {
           $scope.showResultBox = false;
-        } else {
-          $scope.search();
         }
-
       });
 
       //热门搜索
@@ -245,7 +286,7 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
         })
       }
 
-      //点击热门词
+      //点击热门词、点击搜索记录词
       $scope.hotSearch = function (hotWord) {
         $scope.searchData.keyword = hotWord;
       }

@@ -1,7 +1,7 @@
 angular.module('starter.services', [])
 
-  .factory('$$strawberry', ['$http', '$rootScope','$localStorage',
-    function ($http, $rootScope,$localStorage) {
+  .factory('$$strawberry', ['$http', '$rootScope',
+    function ($http, $rootScope) {
       var data = {
         ip: 'https://www.caomeikankan.com',
         getCarousel: "/api/carousel/list/",
@@ -101,37 +101,27 @@ angular.module('starter.services', [])
         },
         getTopList: function (options, type, params) {
           _get(data.getTopList + type + '/', options, {limit: 10, skip: params});
-        },
-        getSearchHistory:function(name){
-          return JSON.parse($localStorage.get(name));
-        },
-        setSearchHistory:function(name,value){
-          $localStorage.set(name,JSON.stringify(value));
-        },
-        clearSearchHistory:function(){
-          $localStorage.clear();
         }
       }
     }
   ])
-  .factory('$localStorage', ['$window', function ($window) {
-    return {
-      set: function (key, value) {
-        $window.localStorage[key] = value;
-      },
-      get: function (key, defaultValue) {
-        return $window.localStorage[key] || defaultValue;
-      },
-      setObject: function (key, value) {
-        $window.localStorage[key] = JSON.stringify(value);
-      },        //读取对象
-      getObject: function (key) {
-        return JSON.parse($window.localStorage[key] || '{}');
-      },
-      clear:function(){
-        return localStorage.clear();
-      }
-
-  }
-  }]);
+  //.factory('$localStorage', ['$window', function ($window) {
+  //  return {
+  //    set: function (key, value) {
+  //      $window.localStorage[key] = value;
+  //    },
+  //    get: function (key) {
+  //      return $window.localStorage[key];
+  //    },
+  //    setObject: function (key, value) {
+  //      $window.localStorage[key] = JSON.stringify(value);
+  //    },        //读取对象
+  //    getObject: function (key) {
+  //      return JSON.parse($window.localStorage[key] || '{}');
+  //    },
+  //    clear:function(){
+  //      return $window.localStorage.clear();
+  //    }
+  //}
+  //}]);
 
