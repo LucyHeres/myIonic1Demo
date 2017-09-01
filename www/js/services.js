@@ -99,6 +99,7 @@ angular.module('starter.services', [])
         search: function (options, params) {
           _get('/api/' + params.type + '/list/', options, params);
         },
+        //dash页-4个top榜
         getTopList: function (options, type, params) {
           _get(data.getTopList + type + '/', options, {limit: 10, skip: params});
         }

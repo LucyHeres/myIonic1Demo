@@ -4,7 +4,7 @@
 
   <!--<ion-content class="scroll-content ionic-scroll" delegate-handle="mainScroll" on-swipe="fun()">-->
   <ion-content>
-    <ion-refresher on-refresh="" pulling-icon="ion-android-arrow-down" pulling-text="下拉更新">
+    <ion-refresher on-refresh="doRefresh()" pulling-icon="ion-load-a"  spinner="bubbles">
     </ion-refresher>
     <div style="width:100%;height:160px;overflow: hidden;background-color: #e6e6e6">
       <ion-slide-box auto-play="true" does-continue="true" ng-if="carousel.length>0">

@@ -23,9 +23,4 @@ angular.module('starter', ['ionic','starter.controllers', 'starter.services','st
   $ionicConfigProvider.platform.android.tabs.style('standard');
   $ionicConfigProvider.platform.android.tabs.position('standard');
 })
-//.config(function (localStorageServiceProvider) {
-//  localStorageServiceProvider
-//    .setPrefix('strawberry')
-//    .setStorageType('localStorage')
-//})
 

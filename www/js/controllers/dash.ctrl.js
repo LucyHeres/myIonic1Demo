@@ -30,12 +30,15 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
               console.log("获取到轮播图", data.result);
               $scope.carousel = data.result;
               $ionicSlideBoxDelegate.update();
+              scrollComplete();
             } else {
               console.log("获取轮播图失败", data.error);
+              scrollComplete();
             }
 
           },
           onError: function () {
+            scrollComplete();
           }
         });
       }
@@ -47,12 +50,15 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
             if (!data.error) {
               console.log("获取小喇叭内容成功", data.result);
               $scope.broadcast = data.result;
+              scrollComplete();
             } else {
               console.log("获取小喇叭内容失败", data.error);
+              scrollComplete();
             }
 
           },
           onError: function () {
+            scrollComplete();
           }
         });
       }
@@ -71,15 +77,16 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
                 console.log("获取长篇列表成功", data.result);
                 $scope.bookList = $scope.bookList.concat(data.result);
               }
-              $scope.$broadcast('scroll.infiniteScrollComplete');
+              scrollComplete();
             } else {
               console.log("获取长篇列表失败", data.error);
+              scrollComplete();
             }
 
           },
           onError: function () {
             $scope.has_more = false;
-            $scope.$broadcast('scroll.infiniteScrollComplete');
+            scrollComplete();
           }
         }, $scope.bookList.length)
       }
@@ -290,6 +297,19 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
       $scope.hotSearch = function (hotWord) {
         $scope.searchData.keyword = hotWord;
       }
+
+
+      //下拉刷新
+      $scope.doRefresh=function(){
+        init();
+      }
+      function scrollComplete(){
+        $scope.$broadcast('scroll.refreshComplete');
+        $scope.$broadcast('scroll.infiniteScrollComplete');
+      }
+
+
+
 
       //初始化
       var init = function () {

@@ -79,6 +79,16 @@ angular.module('starter.routers', [])
         templateUrl:'templates/top/novel-caomei.html',
         controller:'topCtrl'
       })
+      .state('book-cover',{
+        url:'/book-cover',
+        templateUrl:'templates/tpls/book-cover.html',
+        controller:'bookCtrl'
+      })
+      .state('story-cover',{
+        url:'/story-cover',
+        templateUrl:'templates/tpls/story-cover.html',
+        controller:'bookCtrl'
+      })
 
 
 

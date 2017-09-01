@@ -2,8 +2,8 @@
  * Created by LIUXIN on 2017/8/14.
  */
 angular.module('strawberry.main.ctrl', [])
-  .controller('mainCtrl', ['$scope', '$rootScope', '$state','$ionicPopup','$ionicHistory',
-    function ($scope, $rootScope, $state,$ionicPopup,$ionicHistory) {
+  .controller('mainCtrl', ['$scope', '$rootScope', '$state','$ionicPopup','$ionicHistory','$timeout',
+    function ($scope, $rootScope, $state,$ionicPopup,$ionicHistory,$timeout) {
       $rootScope.screenHeight_total = window.innerHeight + "px";
       $rootScope.screenHeight_nofoot = window.innerHeight - 47 + "px";
       $rootScope.screenHeight_nohead = window.innerHeight - 38 + "px";
@@ -54,6 +54,16 @@ angular.module('strawberry.main.ctrl', [])
         $rootScope.routerHistory.splice($rootScope.routerHistory.length - 1, 1);
         $scope.jumpTo($rootScope.routerHistory[$rootScope.routerHistory.length - 1]);
       }
+
+      //$rootScope.$on('$stateChangeSuccess',
+      //  function(event, toState, toParams, fromState, fromParams){
+      //    console.log(event);
+      //    console.log(toState);
+      //    console.log(toParams);
+      //    console.log(fromState);
+      //    console.log(fromParams);
+      //  })
+
 
 
 
