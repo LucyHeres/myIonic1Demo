@@ -64,18 +64,18 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
       }
 
       //获取长篇
-      function getBookList() {
-        $$strawberry.getBookList({
+      function getNovelList() {
+        $$strawberry.getNovelList({
           onSuccess: function (data) {
             if (!data.error) {
               if (data.result.length < 10) {
                 $scope.has_more = false;
                 console.log("获取到最后的长篇列表，再没有内容了", data.result);
-                $scope.bookList = $scope.bookList.concat(data.result);
+                $scope.novelList = $scope.novelList.concat(data.result);
               } else {
                 $scope.has_more = true;
                 console.log("获取长篇列表成功", data.result);
-                $scope.bookList = $scope.bookList.concat(data.result);
+                $scope.novelList = $scope.novelList.concat(data.result);
               }
               scrollComplete();
             } else {
@@ -88,7 +88,7 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
             $scope.has_more = false;
             scrollComplete();
           }
-        }, $scope.bookList.length)
+        }, $scope.novelList.length)
       }
 
       //获取短篇
@@ -120,7 +120,7 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
 
       $scope.getMoreData = function () {
         if ($scope.show_hotbook) {
-          getBookList();
+          getNovelList();
         } else {
           getStoryList();
         }
@@ -315,10 +315,10 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
       var init = function () {
         getCarousel();
         getBroadcast();
-        $scope.bookList = [];
+        $scope.novelList = [];
         $scope.storyList = [];
         $scope.has_more = false;
-        getBookList();
+        getNovelList();
         getStoryList();
         getCarousel2();
         getCategoryList();

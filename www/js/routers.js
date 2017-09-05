@@ -56,7 +56,7 @@ angular.module('starter.routers', [])
       })
       .state('top',{
         url:'/top',
-        templateUrl:'templates/top/index.html',
+        templateUrl:'templates/top/top-index.html',
         abstract: true
       })
       .state('top.novel-weekread',{
@@ -79,12 +79,18 @@ angular.module('starter.routers', [])
         templateUrl:'templates/top/novel-caomei.html',
         controller:'topCtrl'
       })
-      .state('book-cover',{
-        url:'/book-cover',
-        templateUrl:'templates/tpls/book-cover.html',
+      .state('book',{
+        url:'/book',
+        templateUrl:'templates/book/book-index.html',
+        abstract:true
+      })
+      .state('book.novel-cover',{
+        url:'/novel-cover',
+        params:{id:null,authorid:null},
+        templateUrl:'templates/tpls/novel-cover.html',
         controller:'bookCtrl'
       })
-      .state('story-cover',{
+      .state('book.story-cover',{
         url:'/story-cover',
         templateUrl:'templates/tpls/story-cover.html',
         controller:'bookCtrl'

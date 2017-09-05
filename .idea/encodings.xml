@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/www/css/style.less" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/book.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/bookshelf.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/dash.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/loop.ctrl.js" charset="UTF-8" />
@@ -24,9 +25,9 @@
     <file url="file://$PROJECT_DIR$/www/templates/tab-publish.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/tab-user.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/top/author-read.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/www/templates/top/index.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/top/novel-caomei.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/top/novel-reward.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/top/novel-tpl.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/tpls/storyList.html" charset="UTF-8" />
   </component>
 </project>

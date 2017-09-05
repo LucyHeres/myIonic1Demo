@@ -1,7 +1,7 @@
 <ion-view>
-  <div my-sub-header title="周推榜"  left-btn="back()" right-btn="back()"></div>
+  <div my-sub-header title="周推榜"  left-btn="back()"></div>
   <ion-content class="top38" overflow-scroll="false">
-    <div class="bookList" ng-repeat="item in topList track by $index">
+    <div class="novelList" ng-repeat="item in topList track by $index">
       <div ng-include="'templates/top/novel-tpl.html'"></div>
     </div>
     <ion-infinite-scroll

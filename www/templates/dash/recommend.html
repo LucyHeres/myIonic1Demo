@@ -46,8 +46,8 @@
     </div>
     <div ng-show="show_hotbook">
       <!--热门长篇-->
-      <div class="bookList" ng-repeat="item in bookList track by $index">
-        <div ng-include="'templates/tpls/bookList.html'"></div>
+      <div class="novelList" ng-repeat="item in novelList track by $index" ng-click="jumpTo('book.novel-cover',{id:item.oid,authorid:item.author.oid})">
+        <div ng-include="'templates/tpls/novelList.html'"></div>
       </div>
     </div>
     <div ng-show="!show_hotbook">

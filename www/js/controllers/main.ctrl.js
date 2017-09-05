@@ -34,9 +34,10 @@ angular.module('strawberry.main.ctrl', [])
 
       $rootScope.routerHistory = [];
       $rootScope.routerHistory.push('tab.dash');
-      $scope.jumpTo = function (path, id) {
+      $scope.jumpTo = function (path, params) {
         try {
-          $state.go(path);
+          if(params){$state.go(path,params);}
+          else{$state.go(path)}
           //删除重复跳转路由的记录
           for (var i in $rootScope.routerHistory) {
             if ($rootScope.routerHistory[i] == path) {
@@ -49,20 +50,12 @@ angular.module('strawberry.main.ctrl', [])
           console.log(e);
         }
       };
+
       $scope.back = function () {
         console.dir($rootScope.routerHistory);
         $rootScope.routerHistory.splice($rootScope.routerHistory.length - 1, 1);
         $scope.jumpTo($rootScope.routerHistory[$rootScope.routerHistory.length - 1]);
       }
-
-      //$rootScope.$on('$stateChangeSuccess',
-      //  function(event, toState, toParams, fromState, fromParams){
-      //    console.log(event);
-      //    console.log(toState);
-      //    console.log(toParams);
-      //    console.log(fromState);
-      //    console.log(fromParams);
-      //  })
 
 
 

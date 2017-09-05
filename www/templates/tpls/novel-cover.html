@@ -1,0 +1,127 @@
+<div my-sub-header  left-btn="back()" right-btn="dot()"></div>
+
+<ion-content class="top38">
+  <div class="book-detail">
+    <!--<div class="author" ng-click="jumpTo('author',book.author.oid)">-->
+      <!--<img src="static/media/default_avatar.png" alt="" ng-if="!book.author.head_img"/>-->
+      <!--<img ng-src="{{book.author.head_img}}" alt="" ng-if="book.author.head_img"/>-->
+
+      <!--<div>{{book.author.nick_name}}</div>-->
+      <!--<div class="buttons">-->
+        <!--<button ng-click="payAttention(book.author);$event.stopPropagation()" ng-if="!book.author.relation==1">-->
+          <!--加关注-->
+        <!--</button>-->
+        <!--<button ng-click="unfollow(book.author);$event.stopPropagation()" ng-if="book.author.relation==1">-->
+          <!--取消关注-->
+        <!--</button>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div style="width: 100%;padding:8px 0">-->
+      <!--<div class="cover" style="background-image: url('static/media/long_default.png')"-->
+           <!--ng-if="!book.cover_url">-->
+      <!--</div>-->
+      <!--<div class="cover" style="background-image: url('{{book.cover_url}}')" ng-if="book.cover_url"></div>-->
+      <!--<div class="desc">-->
+        <!--<div class="name">-->
+          <!--{{book.name}}-->
+        <!--</div>-->
+        <!--<div class="process">-->
+          <!--<button ng-if="book.serial_status=='ongoing'">连载</button>-->
+          <!--<button ng-if="book.serial_status!='ongoing'" style="background-color:#3399ff;">完结</button>-->
+          <!--<span>更新：{{book.update_time.$date | timeFormat2}}</span>-->
+        <!--</div>-->
+        <!--<div style="color: #999999;font-size: 9px">-->
+          <!--字数{{book.word_count}} &nbsp;&nbsp;&nbsp;浏览{{book.read_count}}-->
+        <!--</div>-->
+        <!--<div class="tags">-->
+                      <!--<span ng-repeat="category in book.categories" ng-click="jumpTo('book-list',{id:category.slug,name:category.name})">-->
+                        <!--{{category.name}}-->
+                      <!--</span>-->
+        <!--</div>-->
+        <!--<div class="feature">-->
+            <!--<span ng-repeat="tag in book.tags track by $index" ng-if="tag"-->
+              <!--<strong>#</strong>{{tag}}<strong>#</strong></span>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div ng-if="book.contract" style="position:absolute;top:9.4rem;left:5.5rem;">-->
+        <!--<img src="static/media/icon/contract.png" alt="" style="width:8%"/>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="short_desc" style="text-align: left">-->
+      <!--{{book.desc}}-->
+    <!--</div>-->
+
+    <!--<div class="button-read" ng-if="!add_to_shelf" ng-click="to_read()">-->
+      <!--开始阅读-->
+    <!--</div>-->
+
+    <!--<div class="button-read" ng-if="add_to_shelf" ng-click="to_read()">-->
+      <!--继续阅读-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash;评论列表&ndash;&gt;-->
+    <!--<div-->
+      <!--ng-include-->
+      <!--src="'templates/shared/comment-list.html'">-->
+    <!--</div>-->
+
+    <!--<div class="more-comments"-->
+         <!--ng-if="comments.length>0"-->
+         <!--ng-click="jumpTo('book.comments',book.oid)">-->
+      <!--查看更多评论 >>-->
+    <!--</div>-->
+    <!--<div class="more-comments"-->
+         <!--ng-if="comments.length==0"-->
+         <!--ng-click="jumpTo('book.comments',book.oid)"-->
+         <!--style="color:#999;">-->
+      <!--暂无评论-->
+    <!--</div>-->
+
+    <!--<div ng-if="show_sameAuthor">-->
+      <!--<div style="width:70%;height:2px;background:#fb6299;"></div>-->
+      <!--<div style="margin:7px 0;">该作者的其他长篇</div>-->
+      <!--<div style="overflow:hidden;height:145px;">-->
+        <!--<div ng-if="!sameAuthor" style="font-size:13px;color: #999;width: 100%;text-align: center;padding-top: 20px;">暂无其他作品</div>-->
+        <!--<div ng-repeat="book in sameAuthor" ng-if="book" style="display:inline-block;width:90px;margin-left:6px;" ng-click="jumpTo('book.cover',{id:book.oid,authorid:book.author.oid})">-->
+          <!--<div style="width:76px;height:102px;background-image: url('{{book.cover_url}}');background-size:contain;" ng-if="book.cover_url"></div>-->
+          <!--<div style="width:85px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size:12px;">{{book.name}}</div>-->
+          <!--<div style="width:85px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size:10px;">{{book.desc}}</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+  </div>
+</ion-content>
+
+<div class="bar bar-footer cover-footer">
+  <div class="row book-tabs">
+    <div class="col-25 book-tab">
+      <div class="img"><img src="img/media/icon/chapters.png" alt=""/></div>
+      <span>目录</span>
+    </div>
+    <div class="col-25 book-tab">
+      <div class="img"><img src="img/media/icon/add-to-shelf-no.png" alt=""/></div>
+      <span>加入书架</span>
+    </div>
+    <!--<div class="col-25 book-tab">-->
+    <!--&lt;!&ndash;<img src="img/media/icon/add-to-shelf.png" alt=""/>&ndash;&gt;-->
+    <!--<span>移出书架</span>-->
+    <!--</div>-->
+    <div class="col-25 book-tab">
+      <div class="img"><img src="img/media/icon/tab-comment.png" alt=""/></div>
+      <span>评论</span>
+    </div>
+    <div class="col-25 book-tab">
+      <div class="img"><img src="img/media/icon/tab-dashang.png" alt=""/></div>
+      <span>打赏</span>
+    </div>
+    <!--<div class="col-25 book-tab">-->
+    <!--&lt;!&ndash;<img src="img/media/icon/zan_0.png" alt="" ng-if="!book.i_liked"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<img src="img/media/icon/zan_1.png" alt="" ng-if="book.i_liked"/>&ndash;&gt;-->
+    <!--<span>点赞</span>-->
+    <!--</div>-->
+  </div>
+</div>
+

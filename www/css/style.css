@@ -1,5 +1,44 @@
-html {
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
   font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
 /*底部tab*/
 .strawberry .tab-item .icon.ion-tab-home {
@@ -149,19 +188,19 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   font-size: 14px;
 }
 /*热门长篇*/
-.bookList {
+.novelList {
   width: 320px;
   padding: 5px;
   border-bottom: 1px solid #F0F0F0;
   position: relative;
 }
-.bookList .cover {
+.novelList .cover {
   display: inline-block;
   position: relative;
   width: 85px;
   vertical-align: top;
 }
-.bookList .cover .contract {
+.novelList .cover .contract {
   display: block;
   width: 20px;
   height: 20px;
@@ -170,49 +209,49 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   right: -4px;
   bottom: -4px;
 }
-.bookList .cover .img {
+.novelList .cover .img {
   width: 75px;
   height: 105px;
   background-position: center;
   background-size: cover;
   margin: 5px 0 0 5px;
 }
-.bookList .info {
+.novelList .info {
   display: inline-block;
   width: 210px;
   margin-left: 5px;
   position: relative;
 }
-.bookList .info .author {
+.novelList .info .author {
   height: 18px;
 }
-.bookList .info .author div {
+.novelList .info .author div {
   display: inline-block;
 }
-.bookList .info .author .avatar {
+.novelList .info .author .avatar {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   overflow: hidden;
 }
-.bookList .info .author .avatar img {
+.novelList .info .author .avatar img {
   width: 100%;
   height: 100%;
   display: block;
 }
-.bookList .info .author .name {
+.novelList .info .author .name {
   font-size: 12px;
   color: #999;
   line-height: 14px;
 }
-.bookList .info .tag {
+.novelList .info .tag {
   font-size: 0;
   width: 170px;
   min-height: 15px;
   max-height: 35px;
   overflow: hidden;
 }
-.bookList .info .tag div {
+.novelList .info .tag div {
   display: inline-block;
   font-size: 8px;
   color: #999;
@@ -221,7 +260,7 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   padding: 0 2px;
   margin-right: 10px;
 }
-.bookList .info .desc {
+.novelList .info .desc {
   height: 32px;
   color: #666;
   font-size: 12px;
@@ -229,13 +268,13 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   overflow: hidden;
   margin: 5px 0;
 }
-.bookList .info .category {
+.novelList .info .category {
   overflow: hidden;
   font-size: 0;
   max-height: 35px;
   height: 15px;
 }
-.bookList .info .category div {
+.novelList .info .category div {
   display: inline-block;
   padding: 0 1px;
   margin-right: 3px;
@@ -245,7 +284,7 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   font-size: 8px;
   line-height: 13px;
 }
-.bookList .info .status {
+.novelList .info .status {
   position: absolute;
   right: 0;
   top: 3px;
@@ -256,17 +295,17 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   padding: 0 5px;
   border-radius: 3px;
 }
-.bookList .info .status.finish {
+.novelList .info .status.finish {
   background: #3399FF;
 }
-.bookList .info .update_time {
+.novelList .info .update_time {
   position: absolute;
   right: 1px;
   bottom: -4px;
   font-size: 10px;
   color: #999;
 }
-.bookList .top-icon {
+.novelList .top-icon {
   height: 100%;
   min-width: 100px;
   text-align: right;
@@ -384,6 +423,8 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
 }
 .sub-header .btns {
   width: 30px;
+}
+.sub-header .btns .icon {
   font-size: 20px;
 }
 .sub-header .title {
@@ -537,4 +578,20 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   background: #fff;
   color: #999;
   border: 1px solid #999;
+}
+/****************************小说cover页****************************/
+.cover-footer .book-tabs {
+  padding-top: 2px;
+}
+.cover-footer .book-tabs .book-tab {
+  text-align: center;
+  color: #999;
+}
+.cover-footer .book-tabs .book-tab .img {
+  width: 15px;
+  height: 15px;
+  margin: 0 auto;
+}
+.cover-footer .book-tabs .book-tab .img img {
+  width: 100%;
 }
