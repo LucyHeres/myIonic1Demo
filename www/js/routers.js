@@ -87,13 +87,25 @@ angular.module('starter.routers', [])
       .state('book.novel-cover',{
         url:'/novel-cover',
         params:{id:null,authorid:null},
-        templateUrl:'templates/tpls/novel-cover.html',
+        templateUrl:'templates/book/novel-cover.html',
         controller:'bookCtrl'
       })
       .state('book.story-cover',{
         url:'/story-cover',
-        templateUrl:'templates/tpls/story-cover.html',
+        params:{id:null},
+        templateUrl:'templates/book/story-cover.html',
         controller:'bookCtrl'
+      })
+      .state('chapter',{
+        url:'/chapter',
+        templateUrl:'templates/chapter/chapter-index.html',
+        abstract:true
+      })
+      .state('chapter.menu',{
+        url:'/menu',
+        params:{id:null},
+        templateUrl:'templates/chapter/chapter-menu.html',
+        controller:'chapterCtrl'
       })
 
 

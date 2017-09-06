@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/www/js/controllers.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/book.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/bookshelf.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/chapter.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/dash.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/loop.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/main.ctrl.js" charset="UTF-8" />
@@ -17,6 +18,7 @@
     <file url="file://$PROJECT_DIR$/www/js/directives.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/routers.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/services.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/book/story-cover.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/dash/recommend.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/dash/search.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/dash/sort.html" charset="UTF-8" />

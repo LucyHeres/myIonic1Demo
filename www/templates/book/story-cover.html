@@ -1,0 +1,100 @@
+<ion-view>
+  <div my-sub-header left-btn="back()" right-btn="dot()"></div>
+  <ion-content class="my-content">
+    <div class="story-cover">
+      <div class="author">
+        <div class="avatar">
+          <img src="img/media/default_avatar.png" alt="" width="100%"
+               ng-if="!book.author.head_img"
+               ng-click="jumpTo('author',book.author.oid)"/>
+          <img ng-src="{{book.author.head_img}}" alt="" width="100%"
+               ng-if="book.author.head_img"
+               ng-click="jumpTo('author',book.author.oid)"/>
+        </div>
+        <div class="name">{{book.author.nick_name}}</div>
+        <div class="buttons">
+          <div ng-click="payAttention(book.author)" ng-if="book.author.relation!=1">
+            加关注
+          </div>
+          <div ng-click="unfollow(book.author)" ng-if="book.author.relation==1">
+            取消关注
+          </div>
+        </div>
+      </div>
+      <div class="story-coverImg">
+        <img ng-src="{{book.cover_url}}" alt="" ng-if="book.cover_url"/>
+      </div>
+      <div class="name">
+        {{book.name}}
+      </div>
+      <div class="word-count">
+        字数&nbsp;{{book.word_count}}&nbsp;&nbsp;&nbsp;&nbsp;浏览&nbsp;{{book.read_count}}
+      </div>
+      <div class="tags">
+                      <span ng-repeat="tag in book.tags track by $index" ng-if="tag">
+                        {{tag}}
+                      </span>
+      </div>
+      <div class="desc">
+        {{book.desc}}
+      </div>
+      <div class="button-read" ng-click="to_read()">
+        开始阅读
+      </div>
+    </div>
+    <!--评论列表-->
+    <div class="commentList">
+      <div class="comment" ng-repeat="comment in commentList track by $index" ng-if="commentList.length>0">
+        <div ng-include="'templates/tpls/commentList.html'"></div>
+      </div>
+      <div class="else" ng-if="commentList.length==0" style="color:#999;">暂无评论</div>
+      <div class="else" ng-if="commentList.length>0" ng-click="jumpTo('book.comments',book.oid)">
+        查看更多评论 >>
+      </div>
+    </div>
+
+      <!--&lt;!&ndash;评论列表&ndash;&gt;-->
+      <!--<div-->
+      <!--ng-include-->
+      <!--src="'templates/shared/comment-list.html'">-->
+      <!--</div>-->
+
+      <!--<div class="more-comments"-->
+      <!--ng-if="comments.length>0"-->
+      <!--ng-click="jumpTo('story.comments',book.oid)">-->
+      <!--查看更多评论-->
+      <!--</div>-->
+      <!--<div class="more-comments"-->
+      <!--ng-if="comments.length==0"-->
+      <!--ng-click="jumpTo('story.comments',book.oid)">-->
+      <!--暂无评论-->
+      <!--</div>-->
+
+  </ion-content>
+
+  <div class="bar bar-footer cover-footer my-foot-tabs">
+    <div class="row book-tabs">
+      <div class="col-33 book-tab"
+           ng-if="!book.keep"
+           ng-click="addKeep()">
+        <div class="img"><img src="img/media/icon/story/tab-collection.png" alt=""/></div>
+        <span>加入收藏</span>
+      </div>
+      <div class="col-33 book-tab"
+           ng-if="book.keep"
+           ng-click="deleteKeep()">
+        <div class="img"><img src="img/media/icon/story/tab-collection-active.png" alt=""/></div>
+        <span>移出收藏</span>
+      </div>
+      <div class="col-33 book-tab" ng-click="jumpTo('story.comments',story.oid)">
+        <div class="img"><img src="img/media/icon/tab-comment.png" alt=""/></div>
+        <span>评论</span>
+      </div>
+      <div class="col-33 book-tab" ng-click="toggle_dashang()">
+        <div class="img"><img src="img/media/icon/tab-dashang.png" alt=""/></div>
+        <span>打赏</span>
+      </div>
+
+    </div>
+  </div>
+</ion-view>

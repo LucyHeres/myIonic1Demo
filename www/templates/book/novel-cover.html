@@ -1,0 +1,125 @@
+<div my-sub-header left-btn="back()" right-btn="dot()"></div>
+
+<ion-content class="my-content">
+  <div class="novel-cover">
+    <div class="author" ng-click="jumpTo('author',book.author.oid)">
+      <div class="avatar">
+        <img src="img/media/default_avatar.png" alt="" ng-if="!book.author.head_img"/>
+        <img ng-src="{{book.author.head_img}}" alt="" ng-if="book.author.head_img"/>
+      </div>
+      <div class="name">{{book.author.nick_name}}</div>
+      <div class="buttons">
+        <div ng-click="payAttention(book.author);$event.stopPropagation()" ng-if="!book.author.relation==1">
+          加关注
+        </div>
+        <div ng-click="unfollow(book.author);$event.stopPropagation()" ng-if="book.author.relation==1">
+          取消关注
+        </div>
+      </div>
+    </div>
+
+    <div class="book">
+      <div class="cover">
+        <div class="img" style="background-image: url('img/media/long_default.png')" ng-if="!book.cover_url"></div>
+        <div class="img" style="background-image: url('{{book.cover_url}}')" ng-if="book.cover_url"></div>
+        <div class="contract" ng-if="book.contract">
+          <img src="img/media/icon/contract.png" alt="" width="100%"/>
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="name">
+          {{book.name}}
+        </div>
+        <div class="process">
+          <div ng-if="book.serial_status=='ongoing'">连载</div>
+          <div ng-if="book.serial_status!='ongoing'" style="background-color:#3399ff;">完结</div>
+          <span>更新：{{book.update_time.$date | timeFormat1}}</span>
+        </div>
+        <div style="color: #999999;font-size: 9px">
+          字数&nbsp;{{book.word_count | number:0}} &nbsp;&nbsp;&nbsp;浏览&nbsp;{{readCount}}
+        </div>
+        <div class="category">
+          <div ng-repeat="category in book.categories"
+            ng-click="jumpTo('book-list',{id:category.slug,name:category.name})">
+          {{category.name}}
+          </div>
+        </div>
+        <div class="tag">
+           <div ng-repeat="tag in book.tags track by $index" ng-if="tag">
+           <strong>#</strong>{{tag}}<strong>#</strong>
+           </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="desc">
+    {{book.desc}}
+    </div>
+
+    <div class="button-read" ng-if="!add_to_shelf" ng-click="to_read()">
+    开始阅读
+    </div>
+
+    <div class="button-read" ng-if="add_to_shelf" ng-click="to_read()">
+    继续阅读
+    </div>
+
+  </div>
+  <!--评论列表-->
+  <div class="commentList">
+    <div class="comment" ng-repeat="comment in commentList track by $index" ng-if="commentList.length>0">
+      <div ng-include="'templates/tpls/commentList.html'"></div>
+    </div>
+    <div class="else" ng-if="commentList.length==0" style="color:#999;">暂无评论</div>
+    <div class="else" ng-if="commentList.length>0" ng-click="jumpTo('book.comments',book.oid)">
+      查看更多评论 >>
+    </div>
+  </div>
+
+  <!--<div ng-if="show_sameAuthor">-->
+  <!--<div style="width:70%;height:2px;background:#fb6299;"></div>-->
+  <!--<div style="margin:7px 0;">该作者的其他长篇</div>-->
+  <!--<div style="overflow:hidden;height:145px;">-->
+  <!--<div ng-if="!sameAuthor" style="font-size:13px;color: #999;width: 100%;text-align: center;padding-top: 20px;">暂无其他作品</div>-->
+  <!--<div ng-repeat="book in sameAuthor" ng-if="book" style="display:inline-block;width:90px;margin-left:6px;" ng-click="jumpTo('book.cover',{id:book.oid,authorid:book.author.oid})">-->
+  <!--<div style="width:76px;height:102px;background-image: url('{{book.cover_url}}');background-size:contain;" ng-if="book.cover_url"></div>-->
+  <!--<div style="width:85px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size:12px;">{{book.name}}</div>-->
+  <!--<div style="width:85px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size:10px;">{{book.desc}}</div>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</div>-->
+
+</ion-content>
+
+<div class="bar bar-footer cover-footer my-foot-tabs">
+  <div class="row book-tabs">
+    <div class="col-25 book-tab" ng-click="jumpTo('chapter.menu',{id:book.oid})">
+      <div class="img"><img src="img/media/icon/chapters.png" alt=""/></div>
+      <span>目录</span>
+    </div>
+    <div class="col-25 book-tab">
+      <div class="img"><img src="img/media/icon/add-to-shelf-no.png" alt=""/></div>
+      <span>加入书架</span>
+    </div>
+    <!--<div class="col-25 book-tab">-->
+    <!--&lt;!&ndash;<img src="img/media/icon/add-to-shelf.png" alt=""/>&ndash;&gt;-->
+    <!--<span>移出书架</span>-->
+    <!--</div>-->
+    <div class="col-25 book-tab">
+      <div class="img"><img src="img/media/icon/tab-comment.png" alt=""/></div>
+      <span>评论</span>
+    </div>
+    <div class="col-25 book-tab">
+      <div class="img"><img src="img/media/icon/tab-dashang.png" alt=""/></div>
+      <span>打赏</span>
+    </div>
+    <!--<div class="col-25 book-tab">-->
+    <!--&lt;!&ndash;<img src="img/media/icon/zan_0.png" alt="" ng-if="!book.i_liked"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<img src="img/media/icon/zan_1.png" alt="" ng-if="book.i_liked"/>&ndash;&gt;-->
+    <!--<span>点赞</span>-->
+    <!--</div>-->
+  </div>
+</div>
+

@@ -1,0 +1,37 @@
+<div class="title">
+  <div class="avatar">
+    <img src="img/media/default_avatar.png" alt="" ng-if="!comment.user.head_img" width="100%"
+         ng-click="jumpTo('author',comment.user.oid)"/>
+    <img ng-src="{{comment.user.head_img}}" alt="" ng-if="comment.user.head_img" width="100%"
+         ng-click="jumpTo('author',comment.user.oid)">
+  </div>
+
+  <span class="name">{{comment.user.nick_name}}</span>
+
+  <div class="icons">
+    <div ng-if="comment.user.oid == user._id">
+      <img src="img/media/icon/trash.png" alt="" ng-click="deleteComment(comment._id,$index)"/>
+    </div>
+    <div><img src="img/media/icon/report.png" alt="" ng-click="showReportView(comment._id)"/></div>
+
+    <div><img src="img/media/icon/comment.png" alt="" ng-click="popupTextarea(comment)"/></div>
+
+    <div>
+      <img src="img/media/icon/zan_0.png" alt="" ng-if="!comment.i_liked" ng-click="zan(comment._id,comment)"/>
+      <img src="img/media/icon/zan_1.png" alt="" ng-if="comment.i_liked" ng-click="cancelzan(comment._id,comment)"/>
+    </div>
+
+    <div>{{comment.like_count}}</div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="words">
+    <span ng-if="comment.snapshot.re">回复<a>{{comment.snapshot.re.user.nick_name}}</a>:</span>
+    <span>{{comment.content}}</span>
+  </div>
+
+  <div class="time">{{comment.datetime.$date | date:'yyyy-MM-dd hh:mm'}}</div>
+</div>
+
+

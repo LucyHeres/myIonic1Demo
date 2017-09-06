@@ -13,7 +13,9 @@ angular.module('starter.services', [])
         getHotSearch: "/api/hot-keywords/list/",
         getTopList: "/api/top/",
         getNovelDetail:"/api/novel/detail/",
-        getStoryDetail: "/api/story/detail/"
+        getStoryDetail: "/api/story/detail/",
+        read: "/api/read/",
+        getCommentList: "/api/comment/list/"
       }
       var popError = false;//是否已弹出过错误提示
       var _get = function (url, options, params) {
@@ -31,7 +33,7 @@ angular.module('starter.services', [])
           }).error(function (e, code) {
             //网络连接失败，处理
             if (!popError) {
-              //$rootScope.modelSet('网络连接失败');
+              $rootScope.modelSet("error！"+code);
               popError = true;
             }
             options.onError(e, code);
@@ -110,30 +112,16 @@ angular.module('starter.services', [])
         },
         getStoryDetail:function(data,options){
           _get(backend.getStoryDetail + data + '/', options);
+        },
+        getReadCount:function(data,options){
+          _get(backend.read + data + '/', options);
+        },
+        getNovelComments:function(data,options){
+          _get(backend.getCommentList, options,{novel:data,limit:5});
+        },
+        getStoryComments:function(data,options){
+          _get(backend.getCommentList, options,{story:data,limit:5});
         }
       }
     }
   ])
-
-
-
-  //.factory('$localStorage', ['$window', function ($window) {
-  //  return {
-  //    set: function (key, value) {
-  //      $window.localStorage[key] = value;
-  //    },
-  //    get: function (key) {
-  //      return $window.localStorage[key];
-  //    },
-  //    setObject: function (key, value) {
-  //      $window.localStorage[key] = JSON.stringify(value);
-  //    },        //读取对象
-  //    getObject: function (key) {
-  //      return JSON.parse($window.localStorage[key] || '{}');
-  //    },
-  //    clear:function(){
-  //      return $window.localStorage.clear();
-  //    }
-  //}
-  //}]);
-
