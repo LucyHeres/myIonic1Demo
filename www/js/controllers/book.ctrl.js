@@ -6,9 +6,9 @@ angular.module('strawberry.book.ctrl', ['starter.services'])
     function ($scope, $$strawberry, $stateParams,$state) {
       $scope.add_to_shelf = false;
       $scope.isAndroid = false;
+        var bookid = $stateParams.id;
+        var authorid = $stateParams.authorid;
 
-      var bookid = $stateParams.id;
-      var authorid = $stateParams.authorid;
       //获取长篇详情
       function getNovelDetail() {
         $$strawberry.getNovelDetail(bookid, {
@@ -74,8 +74,6 @@ angular.module('strawberry.book.ctrl', ['starter.services'])
         $$strawberry.getStoryDetail(bookid, {
           onSuccess: function (data) {
             if (!data.error) {
-              //data.result.word_count = getTotalcount(data.result.chapters);
-              //getReadCount(bookid);
               console.log("获取短篇详情成功", data.result);
               $scope.book = data.result;
             } else {

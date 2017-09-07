@@ -137,6 +137,9 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   top: 38px !important;
   bottom: 42px !important;
 }
+.top-38 {
+  top: 38px !important;
+}
 .dash-three-box {
   width: 320px;
   height: 100%;
@@ -857,4 +860,38 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   height: 40px;
   line-height: 40px;
   text-align: center;
+}
+/****************************章节目录****************************/
+.chapter {
+  padding-bottom: 45px;
+  font-size: 13px;
+}
+.chapter .item {
+  padding: 8px 12px 3px 12px;
+  position: relative;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+}
+.chapter .item .rightImg {
+  position: absolute;
+  right: 9px;
+  bottom: 18px;
+  width: 16px;
+  height: 16px;
+}
+.chapter .item .rightImg img {
+  width: 100%;
+}
+/****************************章节内容****************************/
+.content_page {
+  background: #F3DEBA;
+  padding: 30px;
+}
+.content_page .name {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.content_page .content .para {
+  font-size: 15px;
+  text-indent: 30px;
+  line-height: 24px;
 }

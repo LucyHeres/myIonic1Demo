@@ -2,8 +2,8 @@
  * Created by LIUXIN on 2017/8/14.
  */
 angular.module('strawberry.main.ctrl', [])
-  .controller('mainCtrl', ['$scope', '$rootScope', '$state','$ionicPopup','$ionicHistory','$timeout',
-    function ($scope, $rootScope, $state,$ionicPopup,$ionicHistory,$timeout) {
+  .controller('mainCtrl', ['$scope', '$rootScope', '$state','$ionicPopup','$ionicHistory','$timeout','$window',
+    function ($scope, $rootScope, $state,$ionicPopup,$ionicHistory,$timeout,$window) {
       $rootScope.screenHeight_total = window.innerHeight + "px";
       $rootScope.screenHeight_nofoot = window.innerHeight - 42 + "px";
       $rootScope.screenHeight_nohead = window.innerHeight - 38 + "px";
@@ -33,28 +33,49 @@ angular.module('strawberry.main.ctrl', [])
       };
 
       $rootScope.routerHistory = [];
-      $rootScope.routerHistory.push('tab.dash');
+      $rootScope.routerHistory.push({
+        path:'tab.dash',
+        params:{}
+      });
       $scope.jumpTo = function (path, params) {
         try {
-          if(params){$state.go(path,params);}
-          else{$state.go(path)}
-          //删除重复跳转路由的记录
+
+        //删除重复跳转路由的记录
           for (var i in $rootScope.routerHistory) {
-            if ($rootScope.routerHistory[i] == path) {
+            if ($rootScope.routerHistory[i].path == path) {
               return
-            } else {
-              $rootScope.routerHistory.push(path);
             }
           }
+          if(!params){ params={}; }
+          $state.go(path,params)
+          $rootScope.routerHistory.push({
+            path:path,
+            params:params
+          });
+
+          //if(params){
+          //  $state.go(path,params);
+          //
+          //} else{
+          //  $state.go(path);
+          //  $rootScope.routerHistory.push({
+          //    path:path
+          //  });
+          //}
+
+
         } catch (e) {
           console.log(e);
         }
       };
 
       $scope.back = function () {
+        console.log('路由跳转history表：');
         console.dir($rootScope.routerHistory);
         $rootScope.routerHistory.splice($rootScope.routerHistory.length - 1, 1);
-        $scope.jumpTo($rootScope.routerHistory[$rootScope.routerHistory.length - 1]);
+        var goback=$rootScope.routerHistory[$rootScope.routerHistory.length - 1];
+        $state.go(goback.path,goback.params);
+
       }
 
 

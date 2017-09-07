@@ -15,7 +15,8 @@ angular.module('starter.services', [])
         getNovelDetail:"/api/novel/detail/",
         getStoryDetail: "/api/story/detail/",
         read: "/api/read/",
-        getCommentList: "/api/comment/list/"
+        getCommentList: "/api/comment/list/",
+        getReadChapter:"/api/novel/chapter/"
       }
       var popError = false;//是否已弹出过错误提示
       var _get = function (url, options, params) {
@@ -121,6 +122,9 @@ angular.module('starter.services', [])
         },
         getStoryComments:function(data,options){
           _get(backend.getCommentList, options,{story:data,limit:5});
+        },
+        getReadChapter:function(data,options){
+          _get(backend.getReadChapter+data.id+"/"+data.index+"/", options);
         }
       }
     }
