@@ -19,6 +19,7 @@
     <file url="file://$PROJECT_DIR$/www/js/routers.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/services.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/book/story-cover.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/chapter/chapter-content.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/dash/recommend.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/dash/search.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/dash/sort.html" charset="UTF-8" />

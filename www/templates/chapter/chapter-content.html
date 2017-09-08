@@ -1,12 +1,11 @@
-<ion-content>
-  <div class="content_page">
-    <div class="name">{{chapterContent.name}}</div>
-    <div class="content">
-      <div class="para" ng-repeat="para in paragraphs track by $index">
-        {{para}}
-      </div>
 
-    </div>
+  <div style="width:100%;height:568px;background:#F3DEBA;">
+    <ion-slide-box show-pager="false" style="width:100%;height:568px;">
+      <ion-slide class="content_page" ng-repeat="para in paragraphs" ng-if="para">
+        <div class="name">{{chapterContent.name}}</div>
+        <div class="content">
+          <div class="para">{{para}}</div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
   </div>
-
-</ion-content>
