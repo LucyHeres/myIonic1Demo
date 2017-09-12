@@ -17,8 +17,15 @@
   <link href="css/style.css" rel="stylesheet">
   <script src="lib/ionic/js/jquery-3.1.1.min.js"></script>
   <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <link rel="stylesheet" href="lib/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="lib/slick-carousel/slick/slick-theme.css">
 
   <script src="cordova.js"></script>
+
+  <script src="lib/angular-slick/jquery-slick.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/slick-carousel/slick/slick.js"></script>
+  <script src="lib/angular-slick-carousel/dist/angular-slick.min.js"></script>
 
   <!-- your app's js -->
   <script src="js/app.js"></script>
@@ -45,6 +52,11 @@
   window.ionic.Platform.ready(function () {
     angular.bootstrap(angular.element(document.getElementById('ng-app')), ['starter']);
   });
+//  $(function(){
+//    angular.element(document).ready(function () {
+//      angular.bootstrap($('ng-app'), ['starter']);
+//    });
+//  })
 </script>
 </body>
 </html>

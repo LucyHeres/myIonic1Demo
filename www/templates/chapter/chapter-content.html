@@ -1,11 +1,13 @@
+<div style="width:100%;height:568px;background:#F3DEBA;" >
 
-  <div style="width:100%;height:568px;background:#F3DEBA;">
-    <ion-slide-box show-pager="false" style="width:100%;height:568px;">
-      <ion-slide class="content_page" ng-repeat="para in paragraphs" ng-if="para">
-        <div class="name">{{chapterContent.name}}</div>
-        <div class="content">
-          <div class="para">{{para}}</div>
-        </div>
-      </ion-slide>
-    </ion-slide-box>
-  </div>
+  <slick settings="slickConfig" data='chapterContent.content' init-onload=true ng-if="pageLoaded" >
+    <div class="content_page" ng-repeat="page in pages track by $index" ng-if="page" >
+      <div class="name">{{chapterContent.name}}</div>
+      <div class="content" ng-repeat="line in page track by $index" ng-if="line"
+           ng-class="{'textIndent':line.suojin==true}" >
+        <div class="para" >{{line.text}}</div>
+      </div>
+    </div>
+  </slick>
+
+</div>

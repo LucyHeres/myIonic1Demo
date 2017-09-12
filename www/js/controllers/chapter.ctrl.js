@@ -1,11 +1,16 @@
 /**
  * Created by LIUXIN on 2017/8/14.
  */
-angular.module('strawberry.chapter.ctrl', ['starter.services'])
-  .controller('chapterCtrl', ['$scope', '$$strawberry', '$stateParams', '$state','$ionicSlideBoxDelegate',
-    function ($scope, $$strawberry, $stateParams, $state,$ionicSlideBoxDelegate) {
+angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
+  .controller('chapterCtrl', ['$scope', '$rootScope', '$$strawberry', '$stateParams',
+    '$state', '$ionicSlideBoxDelegate','$window',
+    function ($scope, $rootScope, $$strawberry, $stateParams, $state, $ionicSlideBoxDelegate,$window) {
 
       var bookid = $stateParams.id;
+
+      //设配手机能显示的行列数
+      var LINE_MAX = Math.floor((window.screen.height - 20 - 30 - 15) / 26)-1;
+      var WORD_MAX = Math.floor((320 - 30 - 30) / 16);
 
       //获取长篇详情
       function getNovelDetail() {
@@ -25,23 +30,18 @@ angular.module('strawberry.chapter.ctrl', ['starter.services'])
       }
 
       function chapterContent(chapter_index) {
-        var index=parseInt(chapter_index)+1;
+        $scope.pageLoaded = false;//为了避免 DOM加载 先于数据加载
+        var index = parseInt(chapter_index) + 1;
         $$strawberry.getReadChapter({id: bookid, index: index}, {
           onSuccess: function (data) {
-            $ionicSlideBoxDelegate.update();
             if (!data.error) {
               console.log("获取到第" + index + "章节内容成功", data.result);
               $scope.chapterContent = data.result;
-              //处理 拿到的文章内容
+              //给数据分页
+              page($scope.chapterContent.content);
 
-
-
-
-
-              //分段
-              $scope.paragraphs=$scope.chapterContent.content.split(/\s+/);
-              console.log($scope.paragraphs);
-            }else{
+              $scope.pageLoaded = true;
+            } else {
               console.log("获取到第" + index + "章节内容失败", data.error);
             }
           },
@@ -50,14 +50,110 @@ angular.module('strawberry.chapter.ctrl', ['starter.services'])
         })
       }
 
+      //----------------------给数据分页--start----------------------//
+      function page(content) {
+        //			分段
+        var paragraphs = content.split(/\s+/);
+        //删掉数组中的空元素
+        for (var i = 0; i < paragraphs.length; i++) {
+          if (paragraphs[i] == "") {
+            paragraphs.splice(i, 1);
+          }
+        }
+        var linesNum = 0; //每页行数：最大LINE_MAX
+        //var wordsNum = 0; //每行字数：最大WORD_MAX
+        $scope.lines = []; //所有行
+        $scope.pages = []; //所有的页
 
-      //分页
-      //
-      //function page(){
-      //  var page_height=$rootScope.screenHeight_total-60-30;
-      //  var line_count = page_height/24;
-      //  var height = document.getElementByClassName('content')[0]
-      //}
+        for (var i = 0; i < paragraphs.length; i++) {
+          var para = paragraphs[i];
+          para = "    " + para;
+          var _lineNum = Math.ceil(getLength(para) / (WORD_MAX * 2));
+          linesNum += _lineNum;
+          lineBreak(para, _lineNum);
+        }
+        console.log("该章节所有行", $scope.lines);
+
+        var pagesNum = Math.ceil($scope.lines.length / LINE_MAX);
+        //     分页
+        for (var i = 0; i < pagesNum; i++) {
+          $scope.pages.push($scope.lines.slice(0+LINE_MAX * i,(0+LINE_MAX*i)+LINE_MAX));
+        }
+        console.log('!!!!!!!!!!!!',$scope.pages);
+
+      }
+      function suojin(p){
+        if(p.slice(0,4)=="    "){
+          return true;
+        }else{
+          return false;
+        }
+      }
+      function lineBreak(para, _lineNum) {
+        var _para = para;
+        if (_lineNum <= 1) {
+          $scope.lines.push({text:_para,suojin:suojin(_para)});
+        } else {
+          for (var num = 1; num <= _lineNum; num++) {
+            if (num < _lineNum) {
+              _para = _break(_para);
+            } else {
+              $scope.lines.push({text:_para,suojin:suojin(_para)});
+            }
+          }
+        }
+      }
+
+      function _break(a) {
+        var words = "";
+        var wordsNum = 0;
+        for (var i = 0; i < a.length; i++) {
+          var word = a[i];
+          words += word;
+          wordsNum += getLength(word);
+          if (wordsNum >= (WORD_MAX * 2)) {
+            $scope.lines.push({text:words,suojin:suojin(words)});
+            _para = a.replace(words, "");
+            break;
+          }
+        }
+        return _para;
+      }
+
+      function getLength(str) {
+        var realLength = 0,
+          len = str.length,
+          charCode = -1;
+        for (var i = 0; i < len; i++) {
+          charCode = str.charCodeAt(i);
+          if (charCode >= 0 && charCode <= 128)
+            realLength += 1;
+          else
+            realLength += 2;
+        }
+        return realLength;
+      }
+      //第一段缩进
+      $scope.textIndent={
+        "text-indent":"32px"
+      }
+
+
+      //----------------------给数据分页--end----------------------//
+
+
+      $scope.slickConfig = {
+        enabled: true,
+        draggable: true,
+        method: {},
+        event: {
+          beforeChange: function (event, slick, currentSlide, nextSlide) {
+          },
+          afterChange: function (event, slick, currentSlide, nextSlide) {
+          }
+        }
+      };
+
       var init = function () {
         if ($state.current.name == 'chapter.menu') {
           getNovelDetail();

@@ -4,12 +4,12 @@
 angular.module('strawberry.main.ctrl', [])
   .controller('mainCtrl', ['$scope', '$rootScope', '$state','$ionicPopup','$ionicHistory','$timeout','$window',
     function ($scope, $rootScope, $state,$ionicPopup,$ionicHistory,$timeout,$window) {
-      $rootScope.screenHeight_total = window.innerHeight + "px";
-      $rootScope.screenHeight_nofoot = window.innerHeight - 42 + "px";
-      $rootScope.screenHeight_nohead = window.innerHeight - 38 + "px";
-      $rootScope.screenHeight_content = window.innerHeight - 80 + "px";
+      $rootScope.screenHeight_total = window.screen.height + "px";
+      $rootScope.screenHeight_nofoot = window.screen.height - 42 + "px";
+      $rootScope.screenHeight_nohead = window.screen.height - 38 + "px";
+      $rootScope.screenHeight_content = window.screen.height - 80 + "px";
 
-      $rootScope.screenWidth = window.innerWidth + "px";
+      $rootScope.screenWidth = window.screen.width + "px";
 
       //弹框设置
       $rootScope.modelSet = function (modelMsg, callback) {
