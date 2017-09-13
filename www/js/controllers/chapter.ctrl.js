@@ -56,7 +56,7 @@ angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
         var paragraphs = content.split(/\s+/);
         //删掉数组中的空元素
         for (var i = 0; i < paragraphs.length; i++) {
-          if (paragraphs[i] == "") {
+          if (paragraphs[i] === "") {
             paragraphs.splice(i, 1);
           }
         }
@@ -72,18 +72,18 @@ angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
           linesNum += _lineNum;
           lineBreak(para, _lineNum);
         }
-        console.log("该章节所有行", $scope.lines);
 
         var pagesNum = Math.ceil($scope.lines.length / LINE_MAX);
         //     分页
         for (var i = 0; i < pagesNum; i++) {
           $scope.pages.push($scope.lines.slice(0+LINE_MAX * i,(0+LINE_MAX*i)+LINE_MAX));
         }
-        console.log('!!!!!!!!!!!!',$scope.pages);
+        console.log('该章节所有页',$scope.pages);
 
       }
+      //每段首行缩进
       function suojin(p){
-        if(p.slice(0,4)=="    "){
+        if(p.slice(0,4)==="    "){
           return true;
         }else{
           return false;
@@ -141,26 +141,40 @@ angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
 
       //----------------------给数据分页--end----------------------//
 
-
+      //滑动轮播
       $scope.slickConfig = {
         enabled: true,
         draggable: true,
         method: {},
         event: {
           beforeChange: function (event, slick, currentSlide, nextSlide) {
+
+
           },
           afterChange: function (event, slick, currentSlide, nextSlide) {
+            // console.log($scope.pages.length);
+            // console.log(nextSlide);
+            // if($scope.pages.length===nextSlide){
+            //   console.log('这是最后一页');
+            // }
           }
         }
       };
+      $scope.onDragRight=function(){
+        console.log(1111111111111);
+      }
+
+
 
       var init = function () {
-        if ($state.current.name == 'chapter.menu') {
+        if ($state.current.name === 'chapter.menu') {
           getNovelDetail();
         }
-        else if ($state.current.name == 'chapter.content') {
+        else if ($state.current.name === 'chapter.content') {
           var chapter_index = $stateParams.index;
           chapterContent(chapter_index);
+        }else{
+
         }
 
       }
