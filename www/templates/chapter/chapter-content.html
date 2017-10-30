@@ -2,7 +2,6 @@
 
   <slick settings="slickConfig" data='chapterContent.content'
          infinite="false" init-onload=true ng-if="pageLoaded">
-    <!--<div >-->
       <div class="content_page" ng-repeat="page in pages track by $index" ng-if="page" >
         <div class="name">{{chapterContent.name}}</div>
         <div class="content" ng-repeat="line in page track by $index" ng-if="line"
@@ -10,7 +9,6 @@
           <div class="para" >{{line.text}}</div>
         </div>
       </div>
-    <!--</div>-->
 
   </slick>
 

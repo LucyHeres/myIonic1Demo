@@ -7,9 +7,10 @@ angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
     function ($scope, $rootScope, $$strawberry, $stateParams, $state, $ionicSlideBoxDelegate,$window) {
 
       var bookid = $stateParams.id;
+      var total_chapNum= $stateParams.total_chapNum;
 
       //设配手机能显示的行列数
-      var LINE_MAX = Math.floor((window.screen.height - 20 - 30 - 15) / 26)-1;
+      var LINE_MAX = Math.floor((window.screen.height - 20 - 30 - 25) / (26*(window.screen.width/320)));
       var WORD_MAX = Math.floor((320 - 30 - 30) / 16);
 
       //获取长篇详情
@@ -78,7 +79,7 @@ angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
         for (var i = 0; i < pagesNum; i++) {
           $scope.pages.push($scope.lines.slice(0+LINE_MAX * i,(0+LINE_MAX*i)+LINE_MAX));
         }
-        console.log('该章节所有页',$scope.pages);
+        console.log('该章节所有!!页',$scope.pages);
 
       }
       //每段首行缩进
@@ -145,24 +146,26 @@ angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
       $scope.slickConfig = {
         enabled: true,
         draggable: true,
-        method: {},
         event: {
-          beforeChange: function (event, slick, currentSlide, nextSlide) {
+          edge:function(event, slick, direction){
+            if($scope.current_chapter_index==0 && $scope.current_chapter_index==total_chapNum){
 
+            }else{
+              if(direction=='right'){
+                $scope.current_chapter_index -=1;
+                chapterContent($scope.current_chapter_index);
+              }else if(direction=='left'){
+                $scope.current_chapter_index=parseInt($scope.current_chapter_index);
+                $scope.current_chapter_index+=1;
+                chapterContent($scope.current_chapter_index);
+              }else {
 
-          },
-          afterChange: function (event, slick, currentSlide, nextSlide) {
-            // console.log($scope.pages.length);
-            // console.log(nextSlide);
-            // if($scope.pages.length===nextSlide){
-            //   console.log('这是最后一页');
-            // }
+              }
+            }
+
           }
         }
       };
-      $scope.onDragRight=function(){
-        console.log(1111111111111);
-      }
 
 
 
@@ -171,12 +174,11 @@ angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
           getNovelDetail();
         }
         else if ($state.current.name === 'chapter.content') {
-          var chapter_index = $stateParams.index;
-          chapterContent(chapter_index);
+          $scope.current_chapter_index = $stateParams.index;
+          chapterContent($scope.current_chapter_index);
         }else{
 
         }
-
       }
       init();
     }]);

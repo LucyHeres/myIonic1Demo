@@ -3,7 +3,7 @@
   <div class="list chapter">
     <div class="item"
          ng-repeat="chapter in book.chapters"
-         ng-click="jumpTo('chapter.content',{id:book.oid,index:$index})"
+         ng-click="jumpTo('chapter.content',{id:book.oid,index:$index,total_chapNum:book.chapters.length})"
          style="position: relative">
       <p>
         {{chapter.name}}

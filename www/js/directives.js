@@ -29,9 +29,9 @@ angular.module('starter.directives',[])
           $scope.rightBtn();
         }
         $scope.hasLeft = angular.isDefined($attrs.leftBtn)?true:false;
-        $scope.hasRight =angular.isDefined($attrs.rightBtn)?true:false;
+        $scope.hasRight = angular.isDefined($attrs.rightBtn)?true:false;
       }]
-  }
+   }
 })
 
 

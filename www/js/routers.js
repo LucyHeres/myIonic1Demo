@@ -105,7 +105,7 @@ angular.module('starter.routers', [])
         controller:'chapterCtrl'
       })
       .state('chapter.content',{
-        url:'/content/:id/:index',
+        url:'/content/:id/:index/:total_chapNum',
         templateUrl:'templates/chapter/chapter-content.html',
         controller:'chapterCtrl'
       })
