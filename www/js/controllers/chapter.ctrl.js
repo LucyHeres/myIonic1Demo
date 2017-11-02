@@ -3,14 +3,14 @@
  */
 angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
   .controller('chapterCtrl', ['$scope', '$rootScope', '$$strawberry', '$stateParams',
-    '$state', '$ionicSlideBoxDelegate','$window',
-    function ($scope, $rootScope, $$strawberry, $stateParams, $state, $ionicSlideBoxDelegate,$window) {
+    '$state', '$ionicLoading',
+    function ($scope, $rootScope, $$strawberry, $stateParams, $state, $ionicLoading) {
 
       var bookid = $stateParams.id;
       var total_chapNum= $stateParams.total_chapNum;
 
       //设配手机能显示的行列数
-      var LINE_MAX = Math.floor((window.screen.height - 20 - 30 - 25) / (26*(window.screen.width/320)));
+      var LINE_MAX = Math.floor(($rootScope.AppHeight - 20 - 30 - 25) / (26*(window.screen.width/320)));
       var WORD_MAX = Math.floor((320 - 30 - 30) / 16);
 
       //获取长篇详情
@@ -31,6 +31,7 @@ angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
       }
 
       function chapterContent(chapter_index) {
+        $ionicLoading.show();
         $scope.pageLoaded = false;//为了避免 DOM加载 先于数据加载
         var index = parseInt(chapter_index) + 1;
         $$strawberry.getReadChapter({id: bookid, index: index}, {
@@ -40,13 +41,17 @@ angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
               $scope.chapterContent = data.result;
               //给数据分页
               page($scope.chapterContent.content);
-
               $scope.pageLoaded = true;
+              $ionicLoading.hide();
+              $rootScope.toast("当前为第"+index+"章");
             } else {
+              $ionicLoading.hide();
               console.log("获取到第" + index + "章节内容失败", data.error);
             }
           },
-          onError: function () {
+          onError: function (e) {
+            $ionicLoading.hide();
+            console.log(e);
           }
         })
       }
@@ -148,7 +153,9 @@ angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
         draggable: true,
         event: {
           edge:function(event, slick, direction){
-            if($scope.current_chapter_index==0 && $scope.current_chapter_index==total_chapNum){
+            if($scope.current_chapter_index==0 && direction=='right'){
+
+            }else if($scope.current_chapter_index==total_chapNum-1 && direction=='left'){
 
             }else{
               if(direction=='right'){
@@ -158,9 +165,7 @@ angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
                 $scope.current_chapter_index=parseInt($scope.current_chapter_index);
                 $scope.current_chapter_index+=1;
                 chapterContent($scope.current_chapter_index);
-              }else {
-
-              }
+              }else {}
             }
 
           }
