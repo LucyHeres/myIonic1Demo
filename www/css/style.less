@@ -1,13 +1,14 @@
 
-html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
-pre,code,form,fieldset,legend,input,textarea,p, blockquote,
-th,td,hr,button,article,aside,details,figcaption,figure,
-footer,header,menu,nav,section {
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, code, form, fieldset, legend, input, textarea, p, blockquote,
+th, td, hr, button, article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
   font-size: 12px;
   margin: 0;
   padding: 0;
-  font-family:Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
+
 
 /*底部tab*/
 .strawberry .tab-item .icon.ion-tab-home {
@@ -72,11 +73,12 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   color: #fb7299;
 }
 
-.strawberry .tabs ,.my-foot-tabs{
+.strawberry .tabs, .my-foot-tabs {
   height: 42px;
   padding-top: 6px;
   background-size: 0 !important;
-  background: #f8f8f8;
+  background: #fff;
+  box-shadow: 0 0 1px #888;
 }
 
 /*dash*/
@@ -121,11 +123,12 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   visibility: visible;
 }
 
-.my-content{
+.my-content {
   top: 38px !important;
   bottom: 42px !important;
 }
-.top-38{
+
+.top-38 {
   top: 38px !important;
 }
 
@@ -447,7 +450,8 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
 .sub-header {
   width: 100%;
   height: 38px;
-  background: #f8f8f8;
+  background: #fff;
+  box-shadow: 0 0 1px #888;
   display: flex;
   position: relative;
   z-index: 10;
@@ -457,7 +461,7 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   }
   .btns {
     width: 40px;
-    .icon{
+    .icon {
       font-size: 20px;
     }
   }
@@ -519,23 +523,25 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
     }
   }
 }
-.history{
+
+.history {
   width: 100%;
   height: 100%;
   background: #fff;
-  border:1px solid #f0f0f0;
+  border: 1px solid #f0f0f0;
   border-top-color: transparent;
   border-bottom-width: 5px;
-  .historyList{
-    padding:2px 10px;
-    border-bottom:1px solid #f0f0f0;
-    .closeBtn{
-font-size:20px;
+  .historyList {
+    padding: 2px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    .closeBtn {
+      font-size: 20px;
       position: absolute;
-      right:20px;
+      right: 20px;
     }
   }
 }
+
 .hot-search {
   width: 100%;
   padding: 10px;
@@ -566,7 +572,7 @@ font-size:20px;
 
 /*****************************dash页-top榜****************************/
 .userList {
-  width:320px;
+  width: 320px;
   position: relative;
   .headImg {
     position: absolute;
@@ -621,66 +627,70 @@ font-size:20px;
 
 /****************************小说cover页****************************/
 //底部tab页
-.cover-footer{
-  .book-tabs{
-   padding-top:0;
-   .book-tab{
-     text-align:center;
-     color:#999;
-     .img{
-       width:15px;height:15px;
-       margin:0 auto;
-       img{
-       width:100%;
-       }
-     }
-   }
- }
-}
-//长篇cover
-.novel-cover,.story-cover{
-  padding:10px;
-  .author{
-    width:100%;
-    display:flex;
-    .avatar{
-      width:30px;height:30px;
-      border-radius:50%;
-      overflow:hidden;
-      img{
-        width:100%;
-      }
-    }
-    .name{
-      width:70%;
-      padding-left:10px;
-      line-height:30px;
-    }
-    .buttons{
-      width:20%;
-      text-align: right;
-      div{
-        background:#fb7299;
-        color:#fff;
-        text-align: center;
-        border-radius:5px;
-        margin-top:5px;
+.cover-footer {
+  .book-tabs {
+    padding-top: 0;
+    .book-tab {
+      text-align: center;
+      color: #999;
+      .img {
+        width: 15px;
+        height: 15px;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
       }
     }
   }
-  .book{
-    width:100%;
-    margin-top:10px;
-    display:flex;
-    .cover{
-      width:85px;height:115px;
+}
+
+//长篇cover
+.novel-cover, .story-cover {
+  padding: 10px;
+  .author {
+    width: 100%;
+    display: flex;
+    .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .name {
+      width: 70%;
+      padding-left: 10px;
+      line-height: 30px;
+    }
+    .buttons {
+      width: 20%;
+      text-align: right;
+      div {
+        background: #fb7299;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+    }
+  }
+  .book {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    .cover {
+      width: 85px;
+      height: 115px;
       position: relative;
-      .img{
+      .img {
         background-position: center;
         background-size: cover;
         height: 100%;
       }
-      .contract{
+      .contract {
         position: absolute;
         width: 20px;
         height: 20px;
@@ -688,19 +698,19 @@ font-size:20px;
         bottom: -6px;
       }
     }
-    .info{
-      margin-left:10px;
-      width:205px;
-      .name{
+    .info {
+      margin-left: 10px;
+      width: 205px;
+      .name {
         font-size: 13px;
         color: #333333;
         letter-spacing: 1px;
       }
-      .process{
+      .process {
         font-size: 8px;
         color: #333333;
         display: flex;
-        div{
+        div {
           background-color: #ffbf00;
           color: #FFFFFF;
           font-size: 8px;
@@ -711,12 +721,12 @@ font-size:20px;
           margin-right: 8px;
         }
       }
-      .category{
+      .category {
         overflow: hidden;
-        display:flex;
+        display: flex;
         max-height: 35px;
         height: 15px;
-        margin-top:3px;
+        margin-top: 3px;
         div {
           padding: 0 1px;
           margin-right: 3px;
@@ -727,11 +737,11 @@ font-size:20px;
           line-height: 13px;
         }
       }
-      .tag{
+      .tag {
         min-height: 12px;
         max-height: 35px;
         display: flex;
-        margin-top:3px;
+        margin-top: 3px;
         flex-wrap: wrap;
         div {
           font-size: 8px;
@@ -745,12 +755,12 @@ font-size:20px;
       }
     }
   }
-  .desc{
+  .desc {
     padding: 10px 0;
     color: #999999;
     line-height: 15px;
   }
-  .button-read{
+  .button-read {
     width: 100%;
     height: 32px;
     line-height: 32px;
@@ -762,14 +772,15 @@ font-size:20px;
     background-color: #fb7299;
   }
 }
+
 //短篇cover
-.story-cover{
-  padding:10px;
-  .story-coverImg{
-    width:100%;
-    margin-top:10px;
-    img{
-      width:100%;
+.story-cover {
+  padding: 10px;
+  .story-coverImg {
+    width: 100%;
+    margin-top: 10px;
+    img {
+      width: 100%;
     }
   }
   .name {
@@ -777,13 +788,13 @@ font-size:20px;
     color: #333333;
     letter-spacing: 1px;
   }
-  .word-count{
+  .word-count {
     font-size: 9px;
     color: #999999;
   }
-  .tags{
+  .tags {
     margin-top: 5px;
-    span{
+    span {
       height: 15px;
       line-height: 13px;
       display: inline-block;
@@ -796,8 +807,8 @@ font-size:20px;
       font-size: 8px;
     }
   }
-  .desc{
-    padding:2px 0;
+  .desc {
+    padding: 2px 0;
     font-size: 12px;
     color: #999999;
     line-height: 20px;
@@ -806,28 +817,27 @@ font-size:20px;
   }
 }
 
-
 /****************************评论列表****************************/
-.commentList{
-  padding:0 10px;
-  .comment{
-    width:100%;
+.commentList {
+  padding: 0 10px;
+  .comment {
+    width: 100%;
     border-bottom: 1px solid rgba(204, 204, 204, .5);
-    .title{
+    .title {
       position: relative;
       padding-left: 6px;
       padding-top: 5px;
-      div{
+      div {
         display: inline-block;
         vertical-align: top;
       }
-      .avatar{
+      .avatar {
         width: 30px;
         height: 30px;
-        border-radius:50%;
-        overflow:hidden;
+        border-radius: 50%;
+        overflow: hidden;
       }
-      .name{
+      .name {
         font-size: 10px;
         color: #fa7299;
         display: inline-block;
@@ -843,84 +853,151 @@ font-size:20px;
         top: 13px;
         color: #999999;
         font-size: 9px;
-        div{
-          width:12px;height:12px;
-          margin-left:4px;
-          img{
-            width:100%;
+        div {
+          width: 12px;
+          height: 12px;
+          margin-left: 4px;
+          img {
+            width: 100%;
           }
         }
       }
     }
-    .content{
+    .content {
       padding-left: 49px;
       padding-right: 10px;
       font-size: 12px;
       line-height: 15px;
       color: #333333;
-      .words{
-        margin:5px 0;
+      .words {
+        margin: 5px 0;
       }
-      .time{
-        width:100%;
-        text-align:right;
-        margin-bottom:5px;
-        color:#999;
+      .time {
+        width: 100%;
+        text-align: right;
+        margin-bottom: 5px;
+        color: #999;
       }
     }
   }
-  .else{
-    width:100%;height:40px;line-height:40px;
+  .else {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
   }
 }
 
 /****************************章节目录****************************/
 
-.chapter{
+.chapter {
   padding-bottom: 45px;
   font-size: 13px;
-  .item{
+  .item {
     padding: 8px 12px 3px 12px;
     position: relative;
     border-bottom: 1px solid rgba(204, 204, 204, .3);
-    .rightImg{
+    .rightImg {
       position: absolute;
       right: 9px;
       bottom: 18px;
       width: 16px;
       height: 16px;
-      img{
-        width:100%;
+      img {
+        width: 100%;
       }
     }
   }
 }
 
 /****************************章节内容****************************/
-.content_page{
-  width:100%;
-  height:100%;
-  padding:20px 10px 30px 30px;
-  .name{
-    width:100%;
-    font-size:15px;
-    margin-bottom:5px;
+.content_page {
+  width: 100%;
+  height: 100%;
+  padding: 20px 10px 30px 30px;
+  .name {
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 5px;
   }
-  .content{
-    .para{
-      width:100%;
+  .content {
+    .para {
+      width: 100%;
       font-size: 16px;
       line-height: 26px;
       text-align: justify;
     }
   }
 }
+
 //文本缩进2字符
-.textIndent{
-  text-indent:3em;
+.textIndent {
+  text-indent: 3em;
 }
 
+/******************************user页*************************/
+.user-info {
+  padding:5px;
 
+  .left {
+    .avatar {
+      width: 50px;height:50px;
+      border-radius:50%;
+      overflow:hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .name{
+      width: 100%;
+      height: 30px;
+      line-height:30px;
+      overflow: hidden;
+    }
+  }
+  .right {
+    .fans {
+      display: flex;
+      width:100%;
+      height:50px;
+      div{
+        width:50%;
+        text-align: center;
+      }
+    }
+    .edit{
+      text-align: center;
+      width:100%;height:30px;
+      div{
+        color:#fb7299;
+        border:1px solid #fb7299;
+      }
+    }
+  }
+}
+.user-menu{
+  width:100%;
+  li{
+    width: 100%;
+    padding: 5px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    display: flex;
+    height:40px;
+    .pic{
+      width:30px;height:30px;
+      img{
+        width:100%;height:100%;
+      }
+    }
+    .name{
+      font-size:14px;
+      line-height:20px;
+    }
+    .icon{
+      text-align: center;
+    }
+  }
+}
 
 

@@ -46,7 +46,10 @@ angular.module('strawberry.chapter.ctrl', ['starter.services', 'slickCarousel'])
               $rootScope.toast("当前为第"+index+"章");
             } else {
               $ionicLoading.hide();
-              console.log("获取到第" + index + "章节内容失败", data.error);
+              console.log("获取到第" + index + "章节内容失败", data);
+              // if(data.error="尚未购买"){
+              //
+              // }
             }
           },
           onError: function (e) {

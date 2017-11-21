@@ -11,14 +11,15 @@ angular.module('starter.directives',[])
     '</div>' +
     '<div class="title">{{title}}{{msg}}</div>' +
     '<div class="btns">' +
-    '<div class="icon ion-ios-more" style="font-size:24px;" ng-click="rightBtnClick()" ng-if="hasRight"></div>' +
+    '<div class="{{rightBtnIcon}}" style="font-size:24px;" ng-click="rightBtnClick()" ng-if="hasRight"></div>' +
     '</div>' +
     '</div>',
     replace:true,
     scope:{
       title:'@title',
       leftBtn:'&',
-      rightBtn:'&'
+      rightBtn:'&',
+      rightBtnIcon:'@rightBtnIcon'
     },
     controller:
       ['$scope','$attrs',function($scope,$attrs) {
