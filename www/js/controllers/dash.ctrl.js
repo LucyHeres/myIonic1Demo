@@ -119,6 +119,9 @@ angular.module('strawberry.dash.ctrl', ['starter.services'])
       }
 
       $scope.getMoreData = function () {
+        if($rootScope.currentStateName()!='tab.dash'){
+          return
+        }
         if ($scope.show_hotbook) {
           getNovelList();
         } else {

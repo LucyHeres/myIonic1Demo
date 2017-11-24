@@ -1,0 +1,34 @@
+<ion-view>
+  <div class="login-select">
+    <div class="bg"></div>
+    <div class="close">
+      <i class="ion-close-round" ng-click="back()"></i>
+    </div>
+    <div class="logo">
+      <img src="img/media/icon/strawberry.png" alt=""/>
+    </div>
+    <div class="buttons">
+      <div ng-click="jumpTo('login.log_in')">登录</div>
+      <div ng-click="jumpTo('login.register')">注册</div>
+    </div>
+    <div class="others">
+      <div class="title">
+        <b></b>&nbsp;&nbsp;<span>请选择你喜欢的登录方式</span>&nbsp;&nbsp;<b></b>
+      </div>
+
+      <div class="row" style="">
+        <div class="col-33" ng-click="weiboLogin()">
+          <img src="img/media/login/wei-bo.png" alt="">
+        </div>
+        <div class="col-33" ng-click="qqLogin()">
+          <img src="img/media/login/qq.png" alt="">
+        </div>
+        <div class="col-33" ng-click="wechatLogin()">
+          <img src="img/media/login/wei-xin.png" alt="">
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</ion-view>

@@ -438,7 +438,7 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
   font-size: 20px;
 }
 .sub-header .title {
-  width: 260px;
+  width: 240px;
   font-size: 15px;
 }
 /*****************************dash页-分类页****************************/
@@ -966,4 +966,130 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
 }
 .user-menu li .icon {
   text-align: center;
+}
+/******************************登陆页*************************/
+.login-select {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url('../img/media/login/bei-jing-tu.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.login-select .bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: -1;
+}
+.login-select .close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: #fff;
+}
+.login-select .logo {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 100px);
+}
+.login-select .logo img {
+  width: 100%;
+}
+.login-select .buttons {
+  position: absolute;
+  top: 200px;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.login-select .buttons div {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+}
+.login-select .others {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.login-select .others .title {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+.login-select .others .title b {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  border-top: 1px solid #fff;
+}
+.login-select .others .title span {
+  vertical-align: -20%;
+}
+.login-select .others .row {
+  margin-top: 20px;
+}
+.login-select .others .row div {
+  width: 100px;
+  height: 60px;
+  text-align: center;
+}
+.login-select .others .row div img {
+  width: 60%;
+}
+.log_in {
+  margin-top: 30px;
+}
+.log_in .row {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+}
+.log_in .row i {
+  width: 10%;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+  color: #aaa;
+}
+.log_in .row input {
+  width: 80%;
+  height: 30px;
+  padding-left: 10px;
+}
+.log_in .row.account {
+  border: 1px solid #aaa;
+  border-bottom: none;
+}
+.log_in .row.password {
+  border: 1px solid #aaa;
+}
+.log_in .row.submit {
+  height: 40px;
+  background: #fb7299;
+  margin-top: 30px;
+}
+.log_in .row.submit button[type='submit'] {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 14px;
 }

@@ -1,0 +1,29 @@
+<ion-view>
+  <div class="sub-header">
+    <div class="btns">
+      <div class="icon ion-ios-arrow-back" ng-click="back()"></div>
+    </div>
+    <div class="title">登录</div>
+    <div style="position: absolute;right: 10px;">
+      <div ng-click="" style="right:200px;">忘记密码</div>
+    </div>
+  </div>
+
+  <div class="log_in">
+    <form ng-submit="login()">
+      <div class="row account">
+        <i class="ion-person"></i>
+        <input type="text" ng-model="account.account" placeholder="手机号/邮箱" required/>
+      </div>
+      <div class="row password">
+        <i class="ion-unlocked"></i>
+        <input type="password"  ng-model="account.password" placeholder="密码" required/>
+        <!--<input type="text"  ng-model="account.password" placeholder="密码" required/>-->
+        <i ng-class="{'ion-eye':eye,'ion-eye-disabled':!eye}"  ng-click=""></i>
+      </div>
+      <div class="row submit">
+        <button type="submit">登录</button>
+      </div>
+    </form>
+  </div>
+</ion-view>

@@ -16,7 +16,8 @@ angular.module('starter.services', [])
         getStoryDetail: "/api/story/detail/",
         read: "/api/read/",
         getCommentList: "/api/comment/list/",
-        getReadChapter:"/api/novel/chapter/"
+        getReadChapter:"/api/novel/chapter/",
+        login: "/account/auth/"
       }
       var popError = false;//是否已弹出过错误提示
       var _get = function (url, options, params) {
@@ -40,12 +41,12 @@ angular.module('starter.services', [])
             options.onError(e, code);
           });
       };
-      var _post = function (url, options, config) {
+      var _post = function (url, options,data, config) {
         _config = {
           method: 'POST',
           url: backend.ip + url,
           headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-          backend: $.param(backend)
+          data: $.param(data)
         }
         if (config) {
           for (var i in config) {
@@ -60,23 +61,27 @@ angular.module('starter.services', [])
             options.onError(e, code);
           });
       }
-      var _post_form = function () {
-        $http.post(backend.ip + backend.insert_book_short, backend, {
-          headers: {
-            'Content-Type': undefined,
-            'USER-TOKEN': $rootScope.user.token,
-          },
-          transformRequest: angular.identity
-        })
-          .success(function (backend) {
-            options.onSuccess(backend);
-          })
-          .error(function (e, code) {
-            options.onError(e, code);
-          });
-      }
+      // var _post_form = function () {
+      //   $http.post(backend.ip + backend.insert_book_short, backend, {
+      //     headers: {
+      //       'Content-Type': undefined,
+      //       'USER-TOKEN': $rootScope.user.token,
+      //     },
+      //     transformRequest: angular.identity
+      //   })
+      //     .success(function (backend) {
+      //       options.onSuccess(backend);
+      //     })
+      //     .error(function (e, code) {
+      //       options.onError(e, code);
+      //     });
+      // }
 
       return {
+        //登录相关
+        login:function (data,options) {
+          _post(backend.login,options,data);
+        },
         //dash页-推荐页
         getCarousel: function (options) {
           _get(backend.getCarousel, options);
@@ -126,6 +131,7 @@ angular.module('starter.services', [])
         getReadChapter:function(data,options){
           _get(backend.getReadChapter+data.id+"/"+data.index+"/", options);
         }
+
       }
     }
   ])

@@ -1,5 +1,5 @@
 <ion-view>
-  <div my-sub-header title="周推榜"  left-btn="back()"></div>
+  <div my-sub-header title="周推榜"  left-btn="back"></div>
   <ion-content class="top-38" >
     <div class="novelList" ng-repeat="item in topList track by $index" ng-click="jumpTo('book.novel-cover',{id:item.oid,authorid:item.author.oid})">
       <div ng-include="'templates/top/novel-tpl.html'"></div>

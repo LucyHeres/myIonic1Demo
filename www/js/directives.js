@@ -1,7 +1,7 @@
 /**
  * Created by LIUXIN on 2017/8/16.
  */
-angular.module('starter.directives',[])
+angular.module('starter.directives',['starter.controllers'])
 .directive("mySubHeader",function () {
   return {
     restrict:'EA',
@@ -16,18 +16,46 @@ angular.module('starter.directives',[])
     '</div>',
     replace:true,
     scope:{
-      title:'@title',
-      leftBtn:'&',
-      rightBtn:'&',
-      rightBtnIcon:'@rightBtnIcon'
+      title:'@',
+      leftBtn:'@',
+      leftBtnPara:'@',
+      rightBtn:'@',
+      rightBtnPara:'@',
+      rightBtnIcon:'@'
     },
     controller:
-      ['$scope','$attrs',function($scope,$attrs) {
+      ['$scope','$attrs','$rootScope',function($scope,$attrs,$rootScope) {
         $scope.leftBtnClick=function(){
-          $scope.leftBtn();
+          var fun=$scope.leftBtn;
+          if(angular.isDefined($attrs.leftBtnPara)){
+            if($rootScope[fun]){
+              $rootScope[fun]($attrs.leftBtnPara);
+            }else{
+              $scope[fun]($attrs.leftBtnPara);
+            }
+          } else {
+            if($rootScope[fun]){
+              $rootScope[fun]();
+            }else{
+              $scope[fun]();
+            }
+          }
         }
         $scope.rightBtnClick=function(){
-          $scope.rightBtn();
+          var fun=$scope.rightBtn;
+          if(angular.isDefined($attrs.rightBtnPara)){
+            if($rootScope[fun]){
+              $rootScope[fun]($attrs.rightBtnPara);
+            }else{
+              $scope[fun]($attrs.rightBtnPara);
+            }
+          } else {
+            if($rootScope[fun]){
+              $rootScope[fun]();
+            }else{
+              $scope[fun]();
+            }
+          }
         }
         $scope.hasLeft = angular.isDefined($attrs.leftBtn)?true:false;
         $scope.hasRight = angular.isDefined($attrs.rightBtn)?true:false;

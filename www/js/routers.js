@@ -50,10 +50,33 @@ angular.module('starter.routers', [])
         views: {
           'tab-user': {
             templateUrl: 'templates/tab-user.html',
-            controller: 'userCtrl'
+            controller: 'accountCtrl'
           }
         }
       })
+
+      .state('login',{
+        url:'/login',
+        templateUrl:'templates/login/login-index.html',
+        abstract:true
+      })
+      .state('login.select',{
+        url:'/select',
+        templateUrl:'templates/login/login-select.html',
+        controller:'loginCtrl'
+      })
+      .state('login.log_in',{
+        url:'/log_in',
+        templateUrl:'templates/login/login.html',
+        controller:'loginCtrl'
+      })
+      .state('login.register',{
+        url:'/register',
+        templateUrl:'templates/login/login-register.html',
+        controller:'loginCtrl'
+      })
+
+
       .state('top',{
         url:'/top',
         templateUrl:'templates/top/top-index.html',
@@ -79,6 +102,7 @@ angular.module('starter.routers', [])
         templateUrl:'templates/top/novel-caomei.html',
         controller:'topCtrl'
       })
+
       .state('book',{
         url:'/book',
         templateUrl:'templates/book/book-index.html',
@@ -94,6 +118,7 @@ angular.module('starter.routers', [])
         templateUrl:'templates/book/story-cover.html',
         controller:'bookCtrl'
       })
+
       .state('chapter',{
         url:'/chapter',
         templateUrl:'templates/chapter/chapter-index.html',
@@ -110,6 +135,36 @@ angular.module('starter.routers', [])
         controller:'chapterCtrl'
       })
 
+      .state('account',{
+        url:'/account',
+        templateUrl:'templates/account/account-index.html',
+        abstract:true
+      })
+      .state('account.dynamic',{
+        url:'/dynamic',
+        templateUrl:'templates/account/account-dynamic.html',
+        controller:'accountCtrl'
+      })
+      .state('account.works',{
+        url:'/works',
+        templateUrl:'templates/account/account-works.html',
+        controller:'accountCtrl'
+      })
+      .state('account.wallet',{
+        url:'/wallet',
+        templateUrl:'templates/account/account-wallet.html',
+        controller:'accountCtrl'
+      })
+      .state('account.income',{
+        url:'/income',
+        templateUrl:'templates/account/account-income.html',
+        controller:'accountCtrl'
+      })
+      .state('account.points',{
+        url:'/points',
+        templateUrl:'templates/account/account-points.html',
+        controller:'accountCtrl'
+      })
 
 
 

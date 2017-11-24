@@ -9,7 +9,6 @@ footer, header, menu, nav, section {
   font-family: Arial, sans-serif;
 }
 
-
 /*底部tab*/
 .strawberry .tab-item .icon.ion-tab-home {
   background: url(../img/media/tab/shou-ye.png) no-repeat center;
@@ -466,7 +465,7 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
     }
   }
   .title {
-    width: 260px;
+    width: 240px;
     font-size: 15px;
   }
 }
@@ -937,67 +936,198 @@ ion-tabs.strawberry.tabs-color-active-positive .tab-item.activated {
 
 /******************************user页*************************/
 .user-info {
-  padding:5px;
+  padding: 5px;
 
   .left {
     .avatar {
-      width: 50px;height:50px;
-      border-radius:50%;
-      overflow:hidden;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
       img {
         width: 100%;
       }
     }
-    .name{
+    .name {
       width: 100%;
       height: 30px;
-      line-height:30px;
+      line-height: 30px;
       overflow: hidden;
     }
   }
   .right {
     .fans {
       display: flex;
-      width:100%;
-      height:50px;
-      div{
-        width:50%;
+      width: 100%;
+      height: 50px;
+      div {
+        width: 50%;
         text-align: center;
       }
     }
-    .edit{
+    .edit {
       text-align: center;
-      width:100%;height:30px;
-      div{
-        color:#fb7299;
-        border:1px solid #fb7299;
+      width: 100%;
+      height: 30px;
+      div {
+        color: #fb7299;
+        border: 1px solid #fb7299;
       }
     }
   }
 }
-.user-menu{
-  width:100%;
-  li{
+
+.user-menu {
+  width: 100%;
+  li {
     width: 100%;
     padding: 5px 10px;
     border-bottom: 1px solid #f0f0f0;
     font-size: 14px;
     display: flex;
-    height:40px;
-    .pic{
-      width:30px;height:30px;
-      img{
-        width:100%;height:100%;
+    height: 40px;
+    .pic {
+      width: 30px;
+      height: 30px;
+      img {
+        width: 100%;
+        height: 100%;
       }
     }
-    .name{
-      font-size:14px;
-      line-height:20px;
+    .name {
+      font-size: 14px;
+      line-height: 20px;
     }
-    .icon{
+    .icon {
       text-align: center;
     }
   }
 }
 
+/******************************登陆页*************************/
+.login-select {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url('../img/media/login/bei-jing-tu.jpg');
+  background-position: center;
+  background-size: cover;
+  .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    z-index: -1;
+  }
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #fff;
+  }
+  .logo {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 100px);
+    img {
+      width: 100%;
+    }
+  }
+  .buttons {
+    position: absolute;
+    top: 200px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    div {
+      width: 100%;
+      height: 40px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 10px;
+      color: #fff;
+      font-size: 16px;
+      line-height: 40px;
+    }
+  }
+  .others {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    .title {
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
+      b {
+        display: inline-block;
+        width: 40px;
+        height: 1px;
+        border-top: 1px solid #fff;
+      }
+      span {
+        vertical-align: -20%;
+      }
+    }
+    .row {
+      margin-top: 20px;
+      div {
+        width: 100px;
+        height: 60px;
+        text-align: center;
+        img {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+.log_in{
+  margin-top:30px;
+  .row{
+    width:80%;
+    margin:0 auto;
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    i{
+      width: 10%;
+      height:30px;
+      font-size: 20px;
+      text-align: center;
+      line-height:30px;
+      color:#aaa;
+    }
+    input{
+      width:80%;
+      height:30px;
+      padding-left:10px;
+    }
+    &.account{
+      border:1px solid #aaa;
+      border-bottom:none;
+    }
+    &.password{
+      border:1px solid #aaa;
+    }
+    &.submit{
+      height:40px;
+      background:#fb7299;
+      margin-top:30px;
+      button[type='submit']{
+        width:100%;
+        background: none;
+        border:none;
+        color:#fff;
+        letter-spacing: 2px;
+        font-size:14px;
+      }
+    }
 
+  }
+}
